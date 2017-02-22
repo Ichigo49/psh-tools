@@ -12,9 +12,9 @@
 		[Parameter(Position = 1,
 				   Mandatory = $false)]
 		[Alias('runas')]
-		[System.Management.Automation.Credential()]$Credential =
-		[System.Management.Automation.PSCredential]::Empty,
-		
+		[System.Management.Automation.PSCredential]
+        [System.Management.Automation.Credential()]
+        $Credential = [System.Management.Automation.PSCredential]::Empty,
 		[Parameter(Position = 2)]
 		[switch]$Format
 	)
@@ -147,35 +147,39 @@ function CheckPendingReboot {
 
 function UpTime {
 	Param(
-		[String[]]$ComputerName = $env:COMPUTERNAME
+		[String[]]$ComputerName = $env:COMPUTERNAME,
+		[switch]$Object
 	)
 	$Upobj = @()
 	foreach ($Computer in $Computername) {
 		$LastBoot = (Get-WmiObject -Class Win32_OperatingSystem -computername $Computer).LastBootUpTime
 		$DateBoot = [System.Management.ManagementDateTimeconverter]::ToDateTime($LastBoot)
 		$sysuptime = (Get-Date) - $DateBoot
-		$up = "($Computer) Uptime : " +
-				$sysuptime.days + " days " +
-				$sysuptime.hours + " hours " +
-				$sysuptime.minutes + " min " +
-				$sysuptime.seconds + " sec"
-		$up
-		$UPprops = @{
-			'Server' = $Computer;
-			'DateBoot' = $DateBoot;
-			'Days' = $sysuptime.days;
-			'Hours' = $sysuptime.hours;
-			'Minutes' = $sysuptime.minutes;
-			'Seconds' = $sysuptime.seconds
+		if (-not $Object) {
+			$up = "($Computer) Uptime : " +
+					$sysuptime.days + " days " +
+					$sysuptime.hours + " hours " +
+					$sysuptime.minutes + " min " +
+					$sysuptime.seconds + " sec"
+			$up
+		} else {
+			$UPprops = @{
+				'Server' = $Computer;
+				'DateBoot' = $DateBoot;
+				'Days' = $sysuptime.days;
+				'Hours' = $sysuptime.hours;
+				'Minutes' = $sysuptime.minutes;
+				'Seconds' = $sysuptime.seconds
+			}
+			
+			# Create custom PS object and apply type
+			$UPobj += New-Object -TypeName PSObject -Property $UPprops
 		}
-		
-		# Create custom PS object and apply type
-		$UPobj += New-Object -TypeName PSObject -Property $UPprops
-
 	}
 }
 
 Function clx($SaveRows) {
+	# Like Clear-Host (cls) but keeps history (scroll)
     If ($SaveRows) {
         [System.Console]::SetWindowPosition(0,[System.Console]::CursorTop-($SaveRows+1))
     } Else {
@@ -198,7 +202,7 @@ function Reload-Profile {
         $Profile.AllUsersCurrentHost,
         $Profile.CurrentUserAllHosts,
         $Profile.CurrentUserCurrentHost
-    ) | % {
+    ) | ForEach-Object {
         if(Test-Path $_){
             Write-Verbose "Running $_"
             . $_
@@ -225,8 +229,8 @@ function ll {
 		$all = $false) 
 
     $origFg = $host.ui.rawui.foregroundColor 
-    if ( $all ) { $toList = ls -force $dir }
-    else { $toList = ls $dir }
+    if ( $all ) { $toList = Get-ChildItem -force $dir }
+    else { $toList = Get-ChildItem $dir }
 
     foreach ($Item in $toList)  
     { 
@@ -247,7 +251,7 @@ function ll {
 }
 
 function la { 
-	ls -force 
+	Get-ChildItem -force 
 }
 
 function edit($x) {
@@ -265,7 +269,7 @@ function edit($x) {
 	}
 }
 
-function Random-Password {
+function New-RandomPassword {
 	param([parameter(mandatory=$false)][alias("p")][int]$intPasswordLength = 8) 
 
 	#MAIN

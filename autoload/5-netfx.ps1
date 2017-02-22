@@ -6,7 +6,7 @@ function now {
 }
 
 function ts { 
-	$input | %{
+	$input | ForEach-Object{
 		$_ -as [string]
 	} 
 }

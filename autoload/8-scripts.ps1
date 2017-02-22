@@ -1,9 +1,9 @@
 function listps { 
-	gci -Recurse -Path "${psdir}\autoload" -Include "*.ps1" | %{$_.FullName} 
+	Get-ChildItem -Recurse -Path "${psdir}\autoload" -Include "*.ps1" | ForEach-Object{$_.FullName} 
 }
 
 function editps {
-	gci -Recurse -Path "${psdir}\autoload" -Include "${args}${input}.ps1" | edit 
+	Get-ChildItem -Recurse -Path "${psdir}\autoload" -Include "${args}${input}.ps1" | edit 
 }
 
 function exploreps {
@@ -11,7 +11,7 @@ function exploreps {
 }
 
 function loadps {
-	$scripts = gci -Recurse -Path "${psdir}\autoload" -Include "${args}${input}.ps1" | %{$_.FullName}
+	$scripts = Get-ChildItem -Recurse -Path "${psdir}\autoload" -Include "${args}${input}.ps1" | ForEach-Object{$_.FullName}
 	$scripts
-	$scripts | %{.$_}
+	$scripts | ForEach-Object{.$_}
 }

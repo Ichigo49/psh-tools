@@ -1,17 +1,21 @@
-<#function importad {
-	import-module activedirectory
+function importad {
+	Import-Module activedirectory
 }
 
 function addvmware {
 	add-pssnapin *vim*
 }
-#>
-Import-Module $pslib\modules\PSBookmark
-#Import-Module $pslib\modules\PSRemoteRegistry
-#Import-Module $pslib\modules\PSLogging
 
-#if ($psversiontable.PSVersion.Major -ge 3) {
-#Import-Module $pslib\modules\PSReadLine
+function addvmm {
+    Import-Module virtualmachinemanager
+}
+
+Import-Module $pslib\modules\PSBookmark
+Import-Module $pslib\modules\PSRemoteRegistry
+Import-Module $pslib\modules\PSLogging
+
+if ($psversiontable.PSVersion.Major -ge 3 -and (Get-WmiObject win32_operatingsystem).version -lt 10) {
+Import-Module $pslib\modules\PSReadLine
 ################################
 #   Optimisation PSReadLine    #
 ################################
@@ -327,4 +331,4 @@ Set-PSReadlineKeyHandler -Key Alt+j `
 
     [PSConsoleUtilities.PSConsoleReadLine]::InvokePrompt()
 }
-#}
+}

@@ -9,5 +9,5 @@ function Set-Clipboard {
 }
 
 function ccd {
-	Get-Clipboard | cd
+	Get-Clipboard | Set-Location
 }

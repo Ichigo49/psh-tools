@@ -1,5 +1,5 @@
 function Get-Time {
-return $(get-date | foreach { $_.ToLongTimeString() } ) 
+return $(get-date | ForEach-Object { $_.ToLongTimeString() } ) 
 }
 #Modification de l'affichage du prompt
 function prompt

@@ -2,7 +2,7 @@
 
 Function Get-ProfileBanner {
     <#
-    .NAME
+    .SYNOPSIS
         Get-ProfileBanner
     .SYNOPSIS
         Displays system information to a host.
@@ -10,12 +10,13 @@ Function Get-ProfileBanner {
         The Get-ProfileBanner cmdlet is a system information tool written in PowerShell. 
     .EXAMPLE
     #>
-$WMI_OS = Get-WmiObject -Class Win32_OperatingSystem
-$LastBootTime = ([WMI]'').ConvertToDateTime($WMI_OS.LastBootUpTime)
-$UpTime = New-TimeSpan -Start $LastBootTime -End (Get-Date)
-[string]$Up = [string]$UpTime.days + "days, " + [string]$UpTime.Hours + "h" + [string]$UpTime.Minutes + "m" + [string]$UpTime.Seconds + "s"
-$TimeZone = ([TimeZoneInfo]::Local).displayname
-$CsPhyicallyInstalledMemory = (get-wmiobject -class "win32_physicalmemory" -namespace "root\CIMV2").Capacity
+
+    $WMI_OS = Get-WmiObject -Class Win32_OperatingSystem
+    $LastBootTime = ([WMI]'').ConvertToDateTime($WMI_OS.LastBootUpTime)
+    $UpTime = New-TimeSpan -Start $LastBootTime -End (Get-Date)
+    [string]$Up = [string]$UpTime.days + "days, " + [string]$UpTime.Hours + "h" + [string]$UpTime.Minutes + "m" + [string]$UpTime.Seconds + "s"
+    $TimeZone = ([TimeZoneInfo]::Local).displayname
+    $CsPhyicallyInstalledMemory = (get-wmiobject -class "win32_physicalmemory" -namespace "root\CIMV2").Capacity
 
 
     Write-Host -Object ("##########################") -ForegroundColor Cyan

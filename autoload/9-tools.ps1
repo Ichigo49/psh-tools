@@ -6,7 +6,7 @@ function tmpedit {
 	edit c:\temp\tmp.txt
 }
 function explore {
-	start explorer "/e,$input$args"
+	Start-Process explorer "/e,$input$args"
 }
 
 function FixCRLF ($file) {
