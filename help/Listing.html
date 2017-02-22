@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>COM-WIN psh-tools HomePage</title>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="images/ico_psh-logo.png" alt="Logo de Psh-Tools" />
+                        <h1>COM-WIN psh-tools</h1>    
+                    </div>
+                </div>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html">Accueil</a>
+                        </li>
+                        <li><a href="description.html">Description</a>
+                            <ul>
+                                <li><a href="description.html#autoload">autoload</a></li>
+                                <li><a href="description.html#bin">bin</a></li>
+                                <li><a href="description.html#fic">fic</a></li>
+                                <li><a href="description.html#lib-modules">lib-modules</a></li>
+                                <li><a href="description.html#lib-scripts">lib-scripts</a></li>
+                                <li><a href="description.html#log">log</a></li>
+                                <li><a href="description.html#Scripts">Scripts</a></li>
+                                <li><a href="description.html#Setup">setup</a></li>
+                                <li><a href="description.html#posh-envt">posh-envt.ps1</a></li>
+                                <li><a href="Listing.html">Listing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="profile.html">Profile PowerShell</a>
+                        </li>
+                        <li><a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <section>
+                <article>
+                    <h1><img src="images/ico_hashtag-psh.png" alt="icone PSH" class="ico_categorie" />Psh-Tools</h1>
+                    <p>Listing des fonctions, alias, modules & Scripts du psh-tools</p>
+
+                    <h2><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />autoload\10-exploit.ps1</h2>
+                   
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Nom</th>
+                                <th class="text-left">Description/Valeur</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td class="text-left">$PshToolsVersion</td>
+                                <td class="text-left">Version du Psh-Tools, valeur : "2.0"</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$ComputerName</td>
+                                <td class="text-left">Nom de la machine</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$SystemDrive</td>
+                                <td class="text-left">Lettre du lecteur contenant le repertoire Windows</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZROOT</td>
+                                <td class="text-left">Chemin vers \y900x00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZUTIL</td>
+                                <td class="text-left">Chemin vers \y900x00\util</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZPSH</td>
+                                <td class="text-left">Chemin vers le \psh-tools</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZLIB</td>
+                                <td class="text-left">Chemin vers \psh-tools\lib</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZTMP</td>
+                                <td class="text-left">Chemin vers dossier Temp sur le disque système</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZBIN</td>
+                                <td class="text-left">Chemin vers \psh-tools\bin</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZFIC</td>
+                                <td class="text-left">Chemin vers \y900x00\fic</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$FRAZLOG</td>
+                                <td class="text-left">Chemin vers \y900x00\log</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$journal</td>
+                                <td class="text-left">Chemin vers le fichier \y900x00\log\journal.log</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$exploit</td>
+                                <td class="text-left">Variable qui permet de ne pas charger plusieurs fois le fichier 10-exploit.ps1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$OSlang</td>
+                                <td class="text-left">Langue de l'OS au format numérique: 1033 pour US, 1036 pour FR</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$OSver</td>
+                                <td class="text-left">Version de l'OS (ex : 6.1.7601)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$OSName</td>
+                                <td class="text-left">Nom de l'OS (ex : Microsoft Windows 7 Enterprise)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$OSArchi</td>
+                                <td class="text-left">Architecture de l'OS : 32 ou 64 bits</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">$PSver</td>
+                                <td class="text-left">Version majeur de PowerShell</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Pause</td>
+                                <td class="text-left">fonction Pause (comme sous CMD)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">setdate</td>
+                                <td class="text-left">Variables global</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />autoload\11-fonctions.ps1</h2>
+
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Nom</th>
+                                <th class="text-left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td class="text-left">Get-DiskFree</td>
+                                <td class="text-left">Affiche les used/free space de toutes les partitions/disques</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">CheckPendingReboot</td>
+                                <td class="text-left">Verfifie si un boot est en attente (spécifie si celui-ci est dû au MAJ Windows)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">UpTime</td>
+                                <td class="text-left">Donne l'UpTime d'un ou plusieurs serveur(s)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">clx</td>
+                                <td class="text-left">Fait la même chose qu'un Clear-Host mais garde la possibilité de scroller afin d'avoir un historique</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">p</td>
+                                <td class="text-left">Fait un test-connection (ping) et affiche True ou False selon le résultat</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Reload-Profile</td>
+                                <td class="text-left">Permet de rejouer le profile PowerShell</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">New-Console</td>
+                                <td class="text-left">Ouvre une nouvelle console PowerShell</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">ll</td>
+                                <td class="text-left">Get-ChildItem avec des couleurs différentes selon le format des fichiers</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">la</td>
+                                <td class="text-left">Get-ChildItem -Force : affiche en plus les dossiers/fichiers cachés</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">edit</td>
+                                <td class="text-left">Ouvre le fichier passé en paramètre dans notepad++ (ou notepad si n++ absent)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Random-Password</td>
+                                <td class="text-left">Genère un mot de passe aléatoire, complexe, de 8 caractère par défaut</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Start-SystemProcess</td>
+                                <td class="text-left">Démarre un processus via le shell system (utile pour lancer des url avec le programme par défaut)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Set-GooleTools</td>
+                                <td class="text-left">Charge les fonctions Google-* décrite ci-dessous</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Goole-Search</td>
+                                <td class="text-left">Lance le browser et fait une recherche Google</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Google-Image</td>
+                                <td class="text-left">Lance le browser et fait une recherche Google Image</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Google-Video</td>
+                                <td class="text-left">Lance le browser et fait une recherche Google Video</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Google-News</td>
+                                <td class="text-left">Lance le browser et fait une recherche Google News</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Google-PowerShell</td>
+                                <td class="text-left">Lance le browser et fait une recherche Google en mettant Powershell au début de la requète</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Google-MSDN</td>
+                                <td class="text-left">Lance le browser et fait une recherche Google sur le site msdn.microsoft.com</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Alias for Google Tools</td>
+                                <td class="text-left">Les Aliases suivants sont configurés si on lance la fonction Set-GoogleTools
+                                <ul>
+                                    <li>google : Google-Search</li>
+                                    <li>ggit : Google-Search (go google it)</li>
+                                    <li>gimg : Google-Image</li>
+                                    <li>gnews : Google-News</li>
+                                    <li>gvid : Google-Video</li>
+                                    <li>gpsh : Google-PowerShell</li>
+                                    <li>gmsdn : Google-MSDN</li>
+                                </ul>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <h2><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />autoload\12-aliases.ps1</h2>
+
+                     <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Nom</th>
+                                <th class="text-left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td class="text-left">gcmd</td>
+                                <td class="text-left">Get-Command</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">null</td>
+                                <td class="text-left">Out-Null</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">ad</td>
+                                <td class="text-left">importad</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">vim</td>
+                                <td class="text-left">addvmware</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">sz</td>
+                                <td class="text-left">raccourci vers 7za.exe (dispo dans $psdir\bin</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">exps</td>
+                                <td class="text-left">exploreps</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">ex</td>
+                                <td class="text-left">explore</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">newc</td>
+                                <td class="text-left">New-Console</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Open-Url</td>
+                                <td class="text-left">Start-SystemProcess</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">sysinfo</td>
+                                <td class="text-left">$pslib\Scripts\SYS_INFO.ps1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">rdp</td>
+                                <td class="text-left">mstsc.exe</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">rld</td>
+                                <td class="text-left">Reload-Profile</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">i</td>
+                                <td class="text-left">Invoke-History</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Script</td>
+                                <td class="text-left">PSDrive Script: qui renvoi vers $psdir</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Set-Location $psdir</td>
+                                <td class="text-left">Permet de faire un cd $psdir au chargement du profile PowerShell</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <h2><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />lib\modules</h2>
+
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Nom</th>
+                                <th class="text-left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td class="text-left">MyUptime</td>
+                                <td class="text-left">Récupère l'Uptime des serveurs.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PAM</td>
+                                <td class="text-left">Package de plusieurs modules pour admin système : Snashot AD, Disques, Variables d'environements, hosts, Restore Points, Partages, info système, etc...</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PoshWSUS</td>
+                                <td class="text-left">Gestion de WSUS en PowerShell.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PS7Zip</td>
+                                <td class="text-left">Compresser/Decompresser des archives en 7z, gzip, zip, bzip2 ou tar (utilise 7za.exe).</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PSBookmark</td>
+                                <td class="text-left">Gestionnaire de favoris pour PowerShell. Navigue rapidement d'un dossier à l'autre.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PsHosts</td>
+                                <td class="text-left">Lister / Ajouter / supprimer les entrées dans le fichier hosts</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PSLogging</td>
+                                <td class="text-left">Créer des fichiers de log.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PSReadLine</td>
+                                <td class="text-left">Modification du comportement de la console powershell (coloration syntaxique, gestion d'erreurs, etc...).</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PSRemoteRegistry</td>
+                                <td class="text-left">Gestion suimplifiée par rapport au commandes classiques & gestion à distance du registre.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PSTerminalServices</td>
+                                <td class="text-left">Gestion des sessions RDS.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">SoftwareInstallManager</td>
+                                <td class="text-left">Installer, Desinstaller, Mettre à jour des Soft avec un FrameWork simple d'utilisation.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Citrix.GroupPolicy.Commands</td>
+                                <td class="text-left">Gestion des Stratégie de Groupe Citrix</td>
+                            </tr>                            
+                            <tr>
+                                <td class="text-left">CreateWindowsTile</td>
+                                <td class="text-left">Créer des tuiles Logoff, Restart & Shutdown</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-PortState</td>
+                                <td class="text-left">Test de port TCP.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">HTMLTable</td>
+                                <td class="text-left">Création de tableau HTML</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">MailSniper</td>
+                                <td class="text-left">Recherche de mots clé dans les mails gérer par une infra Exchange (2010 & + ) video explicative dispo <a href="http://korben.info/mailsniper-outil-de-forensic-exchange.html">ici</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">ManageLocalUsersGroups</td>
+                                <td class="text-left">Gestion des utilisateurs & groupes locaux.</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <h2><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />lib\Scripts</h2>
+					
+					<p>Pour charger tous ces scripts : . .\<nom_du_fichier>.ps1</p>
+
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Nom</th>
+                                <th class="text-left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td class="text-left">EXCHANGE\Connect_Exchange.ps1</td>
+                                <td class="text-left">Connexions à distance en Exchange PowerShell (il faut être sur le même domaine que les serveurs Exchange)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">EXCHANGE\Disconnect_Exchange.ps1</td>
+                                <td class="text-left">Deconnexion de la session Exchange PowerShell</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Lync\Get-CsConnections.ps1</td>
+                                <td class="text-left">Récupère les Sessions Lync</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Lync\Get-LyncInfo.ps1</td>
+                                <td class="text-left">Audit Infra Lync</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Lync\List-ConnectedUsers.ps1</td>
+                                <td class="text-left">Récupère la liste des utilisateurs connectés</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Lync\List-CsUsers.ps1</td>
+                                <td class="text-left">Récupère la liste des utilisateurs Lync</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left">Lync\New-LyncEnvDiagram.ps1</td>
+                                <td class="text-left">Rapport Lync environement, sorti sur Visio</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Lync\New-LyncEnvReport.ps1</td>
+                                <td class="text-left">Rapport Lync environement, sorti sur Word</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Lync\New-LyncEnvWorkbook.ps1</td>
+                                <td class="text-left">Rapport Lync environement, sorti sur Excel</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">O365\Connect-O365.ps1</td>
+                                <td class="text-left">Connexion à Office365 : Ad Azure, ExchangeOnline, SharePointOnline, LyncOnline</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\vCheck\vCheck.ps1</td>
+                                <td class="text-left">Rapport Etat d'une infra VMWare</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\Disconnect-VISession</td>
+                                <td class="text-left">Deconnecte un session VMware</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\Get-VIServices</td>
+                                <td class="text-left">Donne l'état des services VMware</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\Get-VISession</td>
+                                <td class="text-left">Donne les sessions VMware</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\Get-VMCreationDate.ps1</td>
+                                <td class="text-left">Récupère la date de creation des VMs</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\Get-VMSize.ps1</td>
+                                <td class="text-left">Récupère la taille d'une VM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\Get-VMWareToolsStatus.ps1</td>
+                                <td class="text-left">Récupère l'état des VMwareTools</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VMware\ListeSnapshot.ps1</td>
+                                <td class="text-left">Liste les Snapshot en cours</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Add-Admimn.ps1</td>
+                                <td class="text-left">Ajouter des Admins locaux avec génération de password</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Compare-Directories.ps1</td>
+                                <td class="text-left">Comparer le contenu de 2 répertoires</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Connect-Mstsc.ps1</td>
+                                <td class="text-left">Connexion MSTSC</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Copy-Console.ps1</td>
+                                <td class="text-left">Copie avec mise en forme le contenu de la console PowerShell </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Copy-ItemWithProgressBar.ps1</td>
+                                <td class="text-left">Affiche une barre de progression (nombre de fichiers) lors d'une copie de fichiers</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Expand-Storage.ps1</td>
+                                <td class="text-left">Agrandit une partition (suite ajout disque côté VMware/Hyper-V)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Export-iDracLicense</td>
+                                <td class="text-left">Exporte la licence iDrac dans un fichier XML</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-ADGPOReplication.ps1</td>
+                                <td class="text-left">Avoir un état des réplications GPO</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-ADLatency.ps1</td>
+                                <td class="text-left">Test la latence entre les DC via la creation d'un objet </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-ClientWSUSSetting.ps1</td>
+                                <td class="text-left">Donne la config client WSUS</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-DirStats.ps1</td>
+                                <td class="text-left">Compte, recursivement, le nombre de fichiers et de dossier dans le répertoire en cours</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-DiskSizeInfo.ps1</td>
+                                <td class="text-left">Info sur la taille des partitions</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-FileHash.ps1</td>
+                                <td class="text-left">Donne le hashage MD5 ou SHA1 d'un fichier</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-HBAWin.ps1</td>
+                                <td class="text-left">Donne les infos sur les WWN</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-IPDetails.ps1</td>
+                                <td class="text-left">Donne les infos IP</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-LicenseStatus.ps1</td>
+                                <td class="text-left">Donne les infos sur la licence (Nom, Activation)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-LocalPort.ps1</td>
+                                <td class="text-left">Formate le 'netstat -anb' en objet</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-LoggedOnUser.ps1</td>
+                                <td class="text-left">Donne la liste des utilisateurs connecté sur une machine</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-LongPathName.ps1</td>
+                                <td class="text-left">Donne les chemins de plus de 245 caractères (need robocopy)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-NetStat.ps1</td>
+                                <td class="text-left">Formate le 'netstat -n' en objet</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-NtpTime.ps1</td>
+                                <td class="text-left">Donne les infos sur la conf NTP</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-PortState.ps1</td>
+                                <td class="text-left">Test de port TCP (équivalent telnet)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-RecentFile.ps1</td>
+                                <td class="text-left">Donne la liste des derniers fichiers modifiés</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-RegistryKeyPropertiesAndValues.ps1</td>
+                                <td class="text-left">Donne les propriétés & valeurs d'une clé de registre</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-RemoteDiskInformation.ps1</td>
+                                <td class="text-left">Donne les infos sur disques/partitons/volumes</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-RemoteFirewallStatus.ps1</td>
+                                <td class="text-left">Donne l'état sur le FireWall Windows</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-ScheduledTasks.ps1</td>
+                                <td class="text-left">Donne les infos sur les tâches planifiées</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-Service2.ps1</td>
+                                <td class="text-left">Identique à Get-Service mais avec la notion de StartMode en plus</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-SharePermissions.ps1</td>
+                                <td class="text-left">Donne les infos sur les ACL des partages</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-SQLInstance.ps1</td>
+                                <td class="text-left">Donne la(les) instance(s) ainsi que la version du SQL Server</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-UserSID.ps1</td>
+                                <td class="text-left">Obtenir le SID d'un utilisateur</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-UserProxy</td>
+                                <td class="text-left">Donne la conf proxy utilisateur</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Get-WindowsKey</td>
+                                <td class="text-left">Donne la clé Windows</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Invoke-Parallel.ps1</td>
+                                <td class="text-left">Permet de paralleliser des opérations sur un ou plusieurs serveurs</td>
+                            </tr>                            
+                            <tr>
+                                <td class="text-left">Move-Logs.ps1</td>
+                                <td class="text-left">Rotation de logs</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">New-IsoFile.ps1</td>
+                                <td class="text-left">Créer une image iso</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Proxy.ps1</td>
+                                <td class="text-left">fonction pour gérer le proxy via winhttp </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Remove-AllEmptySubFolder.ps1</td>
+                                <td class="text-left">Supprime tous les répertoires vide d'une arbo</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Remove-Diacritics.ps1</td>
+                                <td class="text-left">Remplace les caractères accentués (un 'é' devient 'e')</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Remove-UserProxy</td>
+                                <td class="text-left">Supprime la conf proxy utilisateur</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Set-ClientWSUSSetting.ps1</td>
+                                <td class="text-left">Configure les options du client WSUS</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Set-UserProxy.ps1</td>
+                                <td class="text-left">Configure le proxy utilisateur</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Show-BalloonTip.ps1</td>
+                                <td class="text-left">Affiche une info-bulle</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">SYS_INFO.ps1</td>
+                                <td class="text-left">Donne des infos de base sur la machine (Nom, domaine, IP, Disk, RAM, CPU Version OS)</td>
+                            </tr>                            
+                            <tr>
+                                <td class="text-left">Test-HostPort.ps1</td>
+                                <td class="text-left">Test la connectivité d'une machine (WMI & port TCP)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Test-RemoteServer.ps1</td>
+                                <td class="text-left">Test la connectivité d'une machine (Ping, RPC, RDP, WSMan, RemoteRegistry, SCCM, SCOM)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Write-Log.ps1</td>
+                                <td class="text-left">Fonction pour gérer l'écriture dans un log (moins complet que le module PSLogging)</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+
+                </article>
+            </section>
+            
+            <footer>
+                <p>Copyright © 2016 M@l</p>
+            </footer>
+        </div>
+    </body>
+</html>

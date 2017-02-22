@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>COM-WIN psh-tools HomePage</title>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="images/ico_psh-logo.png" alt="Logo de Psh-Tools" />
+                        <h1>COM-WIN psh-tools</h1>    
+                    </div>
+                </div>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html">Accueil</a>
+                        </li>
+                        <li><a href="description.html">Description</a>
+                            <ul>
+                                <li><a href="description.html#autoload">autoload</a></li>
+                                <li><a href="description.html#bin">bin</a></li>
+                                <li><a href="description.html#fic">fic</a></li>
+                                <li><a href="description.html#libmodules">lib-modules</a></li>
+                                <li><a href="description.html#libscripts">lib-scripts</a></li>
+                                <li><a href="description.html#log">log</a></li>
+                                <li><a href="description.html#scripts">Scripts</a></li>
+                                <li><a href="description.html#setup">setup</a></li>
+                                <li><a href="description.html#poshenvt">posh-envt.ps1</a></li>
+                                <li><a href="Listing.html">Listing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="profile.html">Profile PowerShell</a>
+                        </li>
+                        <li><a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <section>
+                <article>
+                    <h1><img src="images/ico_hashtag-psh.png" alt="icone PSH" class="ico_categorie" />Profile PowerShell</h1>
+                    <p>Le profil permet de définir des “préférences” à l’ouverture d’une session Powershell.</p>
+                    <p>Par défaut, il n’y a pas de profil utilisateur Powershell. Il existe 4 types de profils différents sur Powershell :</p>
+                    <ul>
+                        <li>%windir%\system32\WindowsPowerShell\v1.0\profile.ps1<br />
+Ce profil s’applique à tous les utilisateurs et tous les environnements</li><br />
+                        <li>%windir%\system32\WindowsPowerShell\v1.0\Microsoft.PowerShell_profile.ps1<br />
+Ce profil s’applique à tous les utilisateurs, mais uniquement à l’environnement Microsoft.PowerShell</li><br />
+                        <li>%UserProfile%\Mes documents\WindowsPowerShell\profile.ps1<br />
+Ce profil s’applique uniquement à l’utilisateur actuel, mais affecte tous les environnements</li><br />
+                        <li>%UserProfile%\Mes documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1<br />
+Ce profil s’applique uniquement à l’utilisateur actuel et à l’environnement Microsoft.PowerShell</li><br />
+                    </ul>
+                    <p>Afin de mettre en place, il suffit de créer ainsi qu'éditer le fichier profile pour executer le psh-tools :<br /><br />
+                        New-Item $profile -ItemType file -force<br />
+                        Set-Content -Value ". &lt;path-to-psh-tools&gt;\posh-envt.ps1" -Path $profile<br />
+                    </p>
+                </article>
+            </section>
+            
+            <footer>
+                <p>Copyright © 2016 M@l</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>COM-WIN psh-tools HomePage</title>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="images/ico_psh-logo.png" alt="Logo de Psh-Tools" />
+                        <h1>COM-WIN psh-tools</h1>    
+                    </div>
+                </div>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html">Accueil</a>
+                        </li>
+                        <li><a href="description.html">Description</a>
+                            <ul>
+                                <li><a href="description.html#autoload">autoload</a></li>
+                                <li><a href="description.html#bin">bin</a></li>
+                                <li><a href="description.html#fic">fic</a></li>
+                                <li><a href="description.html#lib-modules">lib-modules</a></li>
+                                <li><a href="description.html#lib-scripts">lib-scripts</a></li>
+                                <li><a href="description.html#log">log</a></li>
+                                <li><a href="description.html#Scripts">Scripts</a></li>
+                                <li><a href="description.html#Setup">setup</a></li>
+                                <li><a href="description.html#posh-envt">posh-envt.ps1</a></li>
+                                <li><a href="Listing.html">Listing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="profile.html">Profile PowerShell</a>
+                        </li>
+                        <li><a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <section>
+                <article>
+                    <h1><img src="images/ico_hashtag-psh.png" alt="icone PSH" class="ico_categorie" />Psh-Tools</h1>
+                    <p>Le repertoire <strong>psh-tools</strong> contient l'arborescence suivante :</p>
+                    <ul>
+                        <li>autoload</li>
+                        <li>bin</li>
+                        <li>fic</li>
+                        <li>lib</li>
+                            <ul>
+                                <li>Modules</li>
+                                <li>Scripts</li>
+                            </ul>
+                        <li>log</li>
+                        <li>Scripts</li>
+                        <li>Setup</li>
+                        <li>posh-envt.ps1</li>
+                    </ul>
+                    <p>Chaque repertoire, modules et scripts sont decrit ci-dessous:</p>
+
+                    <h2 id="autoload"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />autoload</h2>
+                    
+                        <p id="p_h2">Chaque Script contenu dans ce repertoire est executé au démarrage d'une session PowerShell si le profile a été mis en place.</p>
+
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Nom</th>
+                                    <th class="text-left">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">1-clipboard.ps1</td>
+                                    <td class="text-left">Gestion du presse papier (Clipboard)<br />fonctions :<br /><b>Get-Clipboard</b><br /><b>Set-Clipboard</b><br /><b>ccd</b> : permet de faire faire un cd sur le chemin contenu dans le Clipboard</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">2-filter.ps1</td>
+                                    <td class="text-left">filter(~fonctions) : <br /><b>ConvertTo-KMG</b> : convertir en KB, MB, GB ou PB<br /><b>match</b> : equivalent grep<br /><b>exclude</b> : equivalent grep -v</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">3-history.ps1</td>
+                                    <td class="text-left">Inactif si la version de powershell est supérieur ou égale à 3.<br />Historique persistant + fonctions :<br /><b>h</b> : historique des 1024 dernières commandes<br /><b>hg</b> : Recherche dasn l'historique<br /><b>hist</b> : N'afficher que la propriété <i>CommandLine</i> de l'historique</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">4-import-module.ps1</td>
+                                    <td class="text-left">Import des modules : <br />PSBookmark, PSRemoteRegistry, PSLogging, PSReadLine<br />fonctions :<br /><b>importad</b> : Import du module activedirectory<br /><b>addvmware</b> : import du module VMware PowerCLI</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">5-netfx.ps1</td>
+                                    <td class="text-left">Raccourci .NET FrameWork.<br />fonctions :<br /><b>now</b> : équivalent Get-Date<br /><b>ts</b> : convertit un objet en chaîne de caractère</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-left">6-reload.ps1</td>
+                                    <td class="text-left">Fonction <b>LaunchConsole</b> qui permet de lancer une nouvelle fenêtre PowerShell (avec kill de la fenêtre courante)</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">7-replace-prompt.ps1</td>
+                                    <td class="text-left">Fonction <b>prompt</b> qui permet de personnaliser l'affichage du prompt PowerShell<br />Ajout de l'heure dans le prompt, affichage du repertoire cournat en couleur et limitation du nombre de caractère afficher.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">8-scripts.ps1</td>
+                                    <td class="text-left">Scripts de gestion des scripts/modules du <i class="ImportantDir">psh-tools\autoload</i>.<br />fonctions :<br /><b>listps</b> : lister les scripts <i class="ImportantDir">psh-tools\autoload</i><br /><b>editps</b> : ouvrir dans Notepad++ les scripts <i class="ImportantDir">psh-tools\autoload</i><br /><b>exploreps</b> : ouvrir <i class="ImportantDir">\psh-tools</i> dans l'explorer<br /><b>loadps</b> : charger dans la session powershell les scripts <i class="ImportantDir">psh-tools\autoload</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">9-tools.ps1</td>
+                                    <td class="text-left">Accès à certain outils.<br />fonctions :<br /><b>tmpedit</b> : Créer & edit le fichier <i class="ImportantDir">C:\temp\tmp.txt</i>, ajoute également la chaîne passée en "input"<br /><b>explore</b> : lance l'explorer dans le répertoire courant ou dans le chemin passé en paramètre<br /><b>FixCRLF</b> : Permet de corriger les CRLF (retour chariot) dans un fichier texte (txt,log,ini,etc...) passé en paramètre</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">10-exploit.ps1</td>
+                                    <td class="text-left">Positionnement de plusieurs variables ainsi que quelques fonctions utiles pour l'écriture de script.<br />La liste des variables avec leurs valeurs & des fonctions dans la page <a href="Listing.html">Listing</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">11-fonctions.ps1</td>
+                                    <td class="text-left">Fonctions utile à l'administration système.<br />La liste des fonctions est disponible sur la page <a href="Listing.html">Listing</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">12-aliases.ps1</td>
+                                    <td class="text-left">Alias de commande ou de fonction<br />La liste des alias est disponible sur la page <a href="Listing.html">Listing</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">13-welcome.ps1</td>
+                                    <td class="text-left">Message affiché lors du lancement d'une nouvelle session PowerShell.<br />Le message donne la date du jour, l'uptime de la machine et test si l'utilisateur est Admin</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">99-Psh-Help.ps1</td>
+                                    <td class="text-left">Script d'aide & d'info sur le psh-tools (en cours de construction!)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    <h2 id="bin"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />bin</h2>
+
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Nom</th>
+                                    <th class="text-left">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">npp</td>
+                                    <td class="text-left">Notepad++ en version minimaliste (pas de theme, plugin, updater).</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Office365</td>
+                                    <td class="text-left">Installeur pour gérer Office365/Azure en PowerShell.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">PortQry</td>
+                                    <td class="text-left">Utilitaire de test de port (TCP & UDP).</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Sysinternals</td>
+                                    <td class="text-left">Les outils Sysinternals de M.Russinovitch.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">7za.exe</td>
+                                    <td class="text-left">Utilitaire 7zip.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">forfiles.exe</td>
+                                    <td class="text-left">Sélectionne et exécute une commande sur un fichier ou un ensemble de fichiers.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">nvspbind.exe</td>
+                                    <td class="text-left">Utilitaire pour modifier le binding des cartes réseaux.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">tail.exe</td>
+                                    <td class="text-left">Utilitaire permettant de faire de l'affichage en temps réel (pour les logs surtout).</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">wget.exe</td>
+                                    <td class="text-left">Utilitaire permettant de recevoir des fichiers depuis des sites web.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    <h2 id="fic"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />fic</h2>
+
+                        <p id="p_h2">
+                            Dossier permettant de stocker des fichiers utiles (par exemple : certificat, ini, flag boot, etc...) 
+                        </p>
+
+                    <h2 id="lib"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />lib</h2>
+
+                        <p id="p_h2">
+                            Dans ce dossier se trouve tous les scripts & modules qui peuvent servir à l'administration & l'exploitation.<br />Les modules sont placés dans <i class="ImportantDir">Modules</i> & les scripts dans <i class="ImportantDir">Scripts</i>.
+                        </p>
+
+                    <h3 id="lib-modules"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />Modules</h3>
+
+                        <p id="p_h3">La liste des modules & leur explication se trouve dans la page <a href="Listing.html">Listing</a>.</p>
+
+                    <h3 id="lib-scripts"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />Scripts</h3>
+
+                        <p id="p_h3">La liste des Scripts & leur explication se trouve dans la page <a href="Listing.html">Listing</a>.</p>
+
+                    <h2 id="log"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />log</h2>
+
+                        <p id="p_h2">Repertoire dans lequel il faut déposer les logs.</p>
+
+                    <h2 id="Scripts"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />Scripts</h2>
+
+                        <p id="p_h2">Répertoire contenant les scripts nécessaires à l'exploitation (purge de log, redémarrage de service).</p>
+
+                        <h2 id="Setup"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />Setup</h2>
+
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Nom</th>
+                                    <th class="text-left">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">GodMode</td>
+                                    <td class="text-left">Raccourci vers le GodMode : tous les items du panneau de configuration</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">TaskBar</td>
+                                    <td class="text-left">Contient un script qui mets quelques raccourcis dans la barre des tâches.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">desactiver IPv6.reg</td>
+                                    <td class="text-left">Créer la valeur DisableComponents & assigne à 0x20 (Préférer IPv4 sur IPv6).</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">EULA_Sysinternals.cmd</td>
+                                    <td class="text-left">Mets les Accept EULA des sysinternals à Yes dans la base de registre.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Icone Network Desktop Documents Win2008</td>
+                                    <td class="text-left">Créer des raccourci sur le bureau.</td>
+                                </tr>                                <tr>
+                                    <td class="text-left">SetupPshProfile.ps1 & .cmd</td>
+                                    <td class="text-left">Créer le profile powerShell pour l'utilisateur courant.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">View network connections.lnk</td>
+                                    <td class="text-left">Raccourci vers les connexions résaux.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    <h2 id="posh-envt"><img src="images/ico_psh-titre.jpg" alt="icone PSH" class="ico_categorie" />posh-envt.ps1</h2>
+
+                        <p id="p_h2">Il s'agit du script à placer dans le profile PowerShell afin de charger l'environement psh-tools.</p>
+
+                </article>
+            </section>
+            
+            <footer>
+                <p>Copyright © 2016 M@l</p>
+            </footer>
+        </div>
+    </body>
+</html>

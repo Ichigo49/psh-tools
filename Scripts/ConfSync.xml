@@ -1,0 +1,11 @@
+<Configuration>
+  <SyncPair>
+    <Source>\\FREEBOX\Disque dur\Téléchargements\</Source>
+    <Target>C:\Temp\BAS</Target>
+    <Filter>*.*</Filter>
+    <ExceptionList>
+      <Exception>*Vikings.S04E20.FiNAL.VOSTFR.720p.HDTV.x264-Visual</Exception>
+      <Exception>*Black Clover</Exception>
+    </ExceptionList>
+  </SyncPair>
+</Configuration>

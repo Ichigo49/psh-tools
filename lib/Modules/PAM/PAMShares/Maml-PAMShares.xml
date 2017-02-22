@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" productVersion="14.0.0" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+<helpItems xmlns="http://msh" schema="maml" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Get-Share</command:name>
+			<maml:description>
+				<maml:para>Returns information about shares on the current machine.</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Richard Siddaway 2010</maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>Share</command:noun>
+			<dev:version>1.0</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Returns information about one share or all shares on the current machine. </maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Default</maml:name>
+				<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+					<maml:name>name</maml:name>
+					<maml:description>
+						<maml:para>Name of share to return</maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue></dev:defaultValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter globbing="true" variableLength="" position="0" required="false" pipelineInput="false">
+				<maml:name>name</maml:name>
+				<maml:description>
+					<maml:para>Name of share to return. Will accept * as a wildcard. See example 3</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			<maml:alert>
+				<maml:para></maml:para>
+			</maml:alert>
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>Example 1</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>Get-Share</dev:code>
+				<dev:remarks>
+					<maml:para>Returns all shares</maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		<command:example>
+										<maml:title>Example 2</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>Get-Share -name users</dev:code>
+										<dev:remarks>
+											<maml:para>Returns information on users share</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example><command:example>
+										<maml:title>Example 3</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>Get-Share t*</dev:code>
+										<dev:remarks>
+											<maml:para>Returns all shares starting with t</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example></command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText></maml:linkText>
+				<maml:uri></maml:uri>
+			</maml:navigationLink>
+		</maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>New-Share</command:name>
+										<maml:description>
+											<maml:para>Creates a new share on the current machine</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Richard Siddaway 2010</maml:para>
+										</maml:copyright>
+										<command:verb>New</command:verb>
+										<command:noun>Share</command:noun>
+										<dev:version>1.0</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Creates a new share on the current machine. Only a file share is available at present.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Default</maml:name>
+											
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>name</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength=""></command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+												<maml:name>path</maml:name>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+									<maml:name>maxcon</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength=""></command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+									<maml:name>desc</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength=""></command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>name</maml:name>
+										<maml:description>
+											<maml:para>Name of the new share</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+											<maml:name>path</maml:name>
+											<maml:description>
+												<maml:para>Path to the folder where the new share will be created</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter><command:parameter globbing="false" variableLength="" position="3" required="false" pipelineInput="false">
+										<maml:name>maxcon</maml:name>
+										<maml:description>
+											<maml:para>Maximum number of connections</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">integer</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="4" required="false" pipelineInput="false">
+										<maml:name>desc</maml:name>
+										<maml:description>
+											<maml:para>Description of share</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>New-Share -name Test1 -path c:\share1 -type 0 -maxcon $null -desc "Test share 1 from module"</dev:code>
+											<dev:remarks>
+												<maml:para>Creating a new share. Using $null for maxcon allows the maximum number of connections.</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Remove-Share</command:name>
+										<maml:description>
+											<maml:para>Deletes and existing share on the local machine</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Richard Siddaway 2010</maml:para>
+										</maml:copyright>
+										<command:verb>Remove</command:verb>
+										<command:noun>Share</command:noun>
+										<dev:version>1.0</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Deletes and existing share on the local machine</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Default</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>name</maml:name>
+												<maml:description>
+													<maml:para>Name of share to remove</maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>name</maml:name>
+											<maml:description>
+												<maml:para>Name of share to remove</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Remove-Share -name test1</dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Set-Share</command:name>
+										<maml:description>
+											<maml:para>Modifies share description or number of connections</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Richard Siddaway 2010</maml:para>
+										</maml:copyright>
+										<command:verb>Set</command:verb>
+										<command:noun>Share</command:noun>
+										<dev:version>1.0</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Modifies share description or number of connections</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Default</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>name</maml:name>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+									<maml:name>maxcon</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength=""></command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+									<maml:name>desc</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength=""></command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>name</maml:name>
+											<maml:description>
+												<maml:para>Name of share</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="1" required="false" pipelineInput="false">
+										<maml:name>maxcon</maml:name>
+										<maml:description>
+											<maml:para>Maximum number of connections</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">integer</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="2" required="false" pipelineInput="false">
+										<maml:name></maml:name>
+										<maml:description>
+											<maml:para>Description of share</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength=""></command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Set-Share -name test1 -maxcon 25 -desc "New Description" </dev:code>
+											<dev:remarks>
+												<maml:para>Set maximum connections to 25 and change the description. The two parameters can be used independently</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Get-ShareAccessMask</command:name>
+										<maml:description>
+											<maml:para>Returns the security access mask for a share</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Richard Siddaway 2010</maml:para>
+										</maml:copyright>
+										<command:verb>Get</command:verb>
+										<command:noun>Share</command:noun>
+										<dev:version>1.0</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Returns the security access mask for a share and decodes the value. This is the access the current user has to the share.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name>Default</maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>name</maml:name>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength=""></command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										</command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>name</maml:name>
+											<maml:description>
+												<maml:para>Share name</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-ShareAccessMask -name test1</dev:code>
+											<dev:remarks>
+												<maml:para>Returns the permissions of the given share</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Get-ShareSecurity</command:name>
+										<maml:description>
+											<maml:para>Returns the security for all shares on a machine</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Richard Siddaway 2010</maml:para>
+										</maml:copyright>
+										<command:verb></command:verb>
+										<command:noun></command:noun>
+										<dev:version></dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Returns the security for all shares on a machine. All shares are listed with the full access rights for each group and user</maml:para>
+									</maml:description>
+									<command:syntax>
+										
+									<command:syntaxItem>
+									<maml:name></maml:name>
+									
+								</command:syntaxItem></command:syntax>
+									<command:parameters>
+										
+									</command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Get-ShareSecurity</dev:code>
+											<dev:remarks>
+												<maml:para></maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command></helpItems>

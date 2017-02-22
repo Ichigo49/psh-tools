@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{59031A47-3F72-44A7-89C5-5595FE6B30EE}"=dword:00000000

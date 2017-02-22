@@ -1,0 +1,1 @@
+powershell -noprofile -executionpolicy Unrestricted -command SetupPshProfile.ps1

@@ -1,0 +1,54 @@
+# Welcome message
+switch ($(Get-Date).DayOfWeek) {
+	"monday" { $ShortDay = "Lun."; break }
+	"tuesday" { $ShortDay = "Mar."; break }
+	"wednesday" { $ShortDay = "Mer."; break }
+	"thursday" { $ShortDay = "Jeu."; break }
+	"friday" { $ShortDay = "Ven."; break }
+	"saturday" { $ShortDay = "Sam."; break }
+	"sunday" { $ShortDay = "Dim."; break }
+}
+
+switch ($(Get-Date).Month) {
+	1 { $Month = "Jan"; break }
+	2 { $Month = "Fev"; break }
+	3 { $Month = "Mar"; break }
+	4 { $Month = "Avr"; break }
+	5 { $Month = "Mai"; break }
+	6 { $Month = "Jun"; break }
+	7 { $Month = "Jui"; break }
+	8 { $Month = "Aou"; break }
+	9 { $Month = "Sep"; break }
+	10 { $Month = "Oct"; break }
+	11 { $Month = "Nov"; break }
+	12 { $Month = "Dec"; break }
+}
+$Day = $(Get-Date).Day
+$Year = $(Get-Date).Year
+
+Write-Host "#########################################################"
+Write-Host "#" -NoNewLine
+Write-Host "  You are now entering PowerShell" -f cyan -NoNewLine
+Write-Host "`t`t`t#" 
+Write-Host "#" -NoNewLine
+Write-Host "  $ShortDay $Day $Month $Year" -f yellow -NoNewLine
+Write-Host "`t`t`t`t`t#" 
+Write-Host "#" -NoNewLine
+Write-Host "  $(uptime)" -f red -NoNewLine
+if (($env:computername).length -ge 5){
+	Write-Host "`t#" 
+}
+else {
+	Write-Host "`t`t#" 
+}
+Write-Host "#" -NoNewLine
+if (Test-IsElevatedUser) {
+	Write-Host "  USER : $env:Username is ADMIN" -f cyan -NoNewLine
+}
+else {
+	Write-Host "  USER : $env:Username is USER" -f red -NoNewLine
+}
+Write-Host "`t`t`t`t#" 
+Write-Host "#########################################################`n"
+
+clx 8
