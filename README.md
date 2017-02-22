@@ -1,7 +1,7 @@
 ## Synopsis
 
 Collection of scripts and module. 
-And a profile connetion for my sysadmin work.
+And a profile connection for my sysadmin work.
 
 ## Code Example
 
