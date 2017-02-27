@@ -147,36 +147,63 @@ function CheckPendingReboot {
 
 function UpTime {
 	Param(
+		[parameter(ValueFromPipeline=$True)]
 		[String[]]$ComputerName = $env:COMPUTERNAME,
-		[switch]$Object
+		[switch]$Simple,
+		[System.Management.Automation.PSCredential]$Credential
 	)
 	$Upobj = @()
 	foreach ($Computer in $Computername) {
-		$LastBoot = (Get-WmiObject -Class Win32_OperatingSystem -computername $Computer).LastBootUpTime
-		$DateBoot = [System.Management.ManagementDateTimeconverter]::ToDateTime($LastBoot)
-		$sysuptime = (Get-Date) - $DateBoot
-		if (-not $Object) {
-			$up = "($Computer) Uptime : " +
+		$param = @{
+		'ComputerName' = $Computer
+		'ErrorVariable' = 'WmiRequestError'
+		}
+		if ($Credential -and ($Computer -notin @($env:COMPUTERNAME,'.'))){$param.Credential = $Credential}
+
+		try {
+			$OperatingSystem = Get-WmiObject -Class Win32_OperatingSystem @param
+		} Catch {
+			$WmiRequestError
+			break
+		}
+
+		if($OperatingSystem -and !$WmiRequestError) {
+			$DateBoot = [System.Management.ManagementDateTimeconverter]::ToDateTime($OperatingSystem.LastBootUpTime)
+			$sysuptime = (Get-Date) - $DateBoot
+			if ($Simple) {
+				"($Computer) Uptime : " +
 					$sysuptime.days + " days " +
 					$sysuptime.hours + " hours " +
 					$sysuptime.minutes + " min " +
 					$sysuptime.seconds + " sec"
-			$up
-		} else {
-			$UPprops = @{
-				'Server' = $Computer;
-				'DateBoot' = $DateBoot;
-				'Days' = $sysuptime.days;
-				'Hours' = $sysuptime.hours;
-				'Minutes' = $sysuptime.minutes;
-				'Seconds' = $sysuptime.seconds
+			} else {
+				[pscustomobject][ordered]@{
+					'Server' = $Computer;
+					'DateBoot' = $DateBoot;
+					'Days' = $sysuptime.days;
+					'Hours' = $sysuptime.hours;
+					'Minutes' = $sysuptime.minutes;
+					'Seconds' = $sysuptime.seconds
+				}
 			}
-			
-			# Create custom PS object and apply type
-			$UPobj += New-Object -TypeName PSObject -Property $UPprops
+		}
+		else {
+			if ($Simple) {
+				"($Computer) Uptime : " + " N/A"
+			} else {
+				[pscustomobject][ordered]@{
+					'Server' = $Computer;
+					'DateBoot' = "N/A";
+					'Days' = "N/A";
+					'Hours' = "N/A";
+					'Minutes' = "N/A";
+					'Seconds' = "N/A";
+				}
+			}
 		}
 	}
 }
+
 
 Function clx($SaveRows) {
 	# Like Clear-Host (cls) but keeps history (scroll)
