@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type='text/xsl' href='style.xsl'?>
+<Settings>
+  <DatabaseProfiles>
+    <Profile Name="MALGFI">
+      <DatabasePath>F:\GFI\MAL.kdbx</DatabasePath>
+      <KeyPath>
+      </KeyPath>
+      <UseNetworkAccount>False</UseNetworkAccount>
+      <UseMasterKey>True</UseMasterKey>
+      <AuthenticationType>Master</AuthenticationType>
+    </Profile>
+  </DatabaseProfiles>
+  <PasswordProfiles />
+</Settings>

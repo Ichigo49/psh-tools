@@ -1,0 +1,18 @@
+﻿TOPIC
+    about_servermanagementtools
+
+SHORT DESCRIPTION
+    Collection of PowerShell functions for managing Windows Server.
+
+SEE ALSO
+    -
+    https://github.com/twillin912/ServerManagementTools
+
+KEYWORDS
+    - Server
+- Management
+- DFSR
+- Backlog
+- Logging
+- LogRotate
+
