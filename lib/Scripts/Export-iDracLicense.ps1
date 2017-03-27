@@ -53,11 +53,11 @@ if (-not (Test-Path $ExportPath)) {
 	New-Item -Path $ExportPath -ItemType directory | Out-Null
 }
 $fqdd = racadm license view | Select-String "Entitlement ID"
-$fqdd = (($fqdd.Line).split("=")[1]).Substring(1)
+$fqdd = (($fqdd.Line).split("=")[1]).Trim()
 $dracver = racadm license view | Select-String "Device Description"
-$dracver = (($dracver.line).split("=")[1]).Substring(1)
+$dracver = (($dracver.line).split("=")[1]).Trim()
 $serial = (Get-WmiObject -Class win32_bios).SerialNumber
-$file = $ExportPath + $serial + "_" + $fqdd + "_" + $computername + ".xml"
+$file = $ExportPath + "\" + $serial + "_" + $fqdd + "_" + $computername + ".xml"
 racadm license export -f $file -e $fqdd
 
 }

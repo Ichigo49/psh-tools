@@ -14,7 +14,6 @@ Import-Module $pslib\modules\PSBookmark
 Import-Module $pslib\modules\PSColor
 Import-Module $pslib\modules\PSRemoteRegistry
 Import-Module $pslib\modules\PSLogging
-Import-Module $pslib\modules\MyUptime
 
 if ($psversiontable.PSVersion.Major -ge 3 -and (Get-WmiObject win32_operatingsystem).version -lt 10) {
     Import-Module $pslib\modules\PSReadLine

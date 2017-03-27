@@ -55,6 +55,19 @@ function Get-DirStats {
 		[UInt64] $script:totalcount = 0
 		[UInt64] $script:totalbytes = 0
 
+		Filter ConvertTo-KMG {
+			$bytecount = $_
+			switch ([math]::truncate([math]::log($bytecount,1024))) 
+			{
+				0 {"$bytecount Bytes"}
+				1 {"{0:n2} KB" -f ($bytecount / 1kb)}
+				2 {"{0:n2} MB" -f ($bytecount / 1mb)}
+				3 {"{0:n2} GB" -f ($bytecount / 1gb)}
+				4 {"{0:n2} TB" -f ($bytecount / 1tb)}
+				Default {"{0:n2} PB" -f ($bytecount / 1pb)}
+			}
+		}
+		
 		# Returns a [System.IO.DirectoryInfo] object if it exists.
 		function Get-Directory {
 			param( $item )
@@ -97,7 +110,7 @@ function Get-DirStats {
 				$output = $files | Measure-Object -Sum -Property Length | Select-Object `
 				@{Name="Path"; Expression={$directory.FullName}},
 				@{Name="Files"; Expression={$_.Count; $script:totalcount += $_.Count}},
-				@{Name="Size"; Expression={$_.Sum; $script:totalbytes += $_.Sum}}
+				@{Name="Size"; Expression={$_.Sum|ConvertTo-KMG; $script:totalbytes += $_.Sum}}
 			}
 			else {
 				$output = "" | Select-Object `
@@ -150,7 +163,7 @@ function Get-DirStats {
 			$output = "" | Select-Object `
 			@{Name="Path"; Expression={"<Total>"}},
 			@{Name="Files"; Expression={$script:totalcount}},
-			@{Name="Size"; Expression={$script:totalbytes}}
+			@{Name="Size"; Expression={$script:totalbytes|ConvertTo-KMG}}
 			if ( -not $FormatNumbers ) { $output } else { $output | Format-Output }
 		}
 	}
