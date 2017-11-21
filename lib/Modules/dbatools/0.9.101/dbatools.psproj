@@ -1,0 +1,742 @@
+﻿<Project Synchronized="True" SyncFilter="*.ps1;*.psm1;*.psd1;*.ps1xml;*.psf;*.pss;*.xml;*.yml;*.dll;*.md;*.txt">
+  <Version>2.0</Version>
+  <FileID>94133dcb-ebe3-4de5-a5e7-854cc2ddd75d</FileID>
+  <ProjectType>1</ProjectType>
+  <Folders>
+    <Folder>bin</Folder>
+    <Folder>functions</Folder>
+    <Folder>internal</Folder>
+    <Folder>optional</Folder>
+    <Folder>tests</Folder>
+    <Folder>xml</Folder>
+    <Folder>internal\configurations</Folder>
+    <Folder>internal\dynamicparams</Folder>
+    <Folder>internal\scripts</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Properties</Folder>
+    <Folder>bin\projects</Folder>
+    <Folder>bin\projects\dbatools</Folder>
+    <Folder>bin\projects\dbatools\dbatools</Folder>
+    <Folder>bin\diagnosticquery</Folder>
+    <Folder>bin\smo</Folder>
+    <Folder>bin\projects\dbatools\dbatools.Tests</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Configuration</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Connection</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Database</Folder>
+    <Folder>bin\projects\dbatools\dbatools\dbaSystem</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Exceptions</Folder>
+    <Folder>bin\projects\dbatools\dbatools\General</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Parameter</Folder>
+    <Folder>bin\projects\dbatools\dbatools\TabExpansion</Folder>
+    <Folder>bin\projects\dbatools\dbatools\TypeConversion</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Utility</Folder>
+    <Folder>bin\projects\dbatools\dbatools\Validation</Folder>
+    <Folder>bin\projects\dbatools\dbatools.Tests\Connection</Folder>
+    <Folder>bin\projects\dbatools\dbatools.Tests\Parameter</Folder>
+    <Folder>bin\projects\dbatools\dbatools.Tests\Properties</Folder>
+    <Folder>bin\projects\dbatools\dbatools.Tests\Utility</Folder>
+    <Folder>tests\ObjectDefinitions</Folder>
+    <Folder>tests\ObjectDefinitions\BackupRestore</Folder>
+    <Folder>tests\ObjectDefinitions\BackupRestore\RawInput</Folder>
+  </Folders>
+  <Files>
+    <File Build="2">dbatools.psd1</File>
+    <File Build="0">dbatools.psm1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-install_ps1">install.ps1</File>
+    <File Build="2">appveyor.yml</File>
+    <File Build="2">contributing.md</File>
+    <File Build="2">readme.md</File>
+    <File Build="2">LICENSE.txt</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-library_ps1">bin\library.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-typealiases_ps1">bin\typealiases.ps1</File>
+    <File Build="2">bin\PSScriptAnalyzerRules.psd1</File>
+    <File Build="2">bin\dbatools.xml</File>
+    <File Build="2">bin\dbatools.dll</File>
+    <File Build="2">bin\LumenWorks.Framework.IO.dll</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Add-DbaComputerCertificate_ps1">functions\Add-DbaComputerCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Backup-DbaDatabase_ps1">functions\Backup-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Backup-DbaDatabaseCertificate_ps1">functions\Backup-DbaDatabaseCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Backup-DbaDatabaseMasterKey_ps1">functions\Backup-DbaDatabaseMasterKey.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Clear-DbaSqlConnectionPool_ps1">functions\Clear-DbaSqlConnectionPool.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Clear-DbaWaitStatistics_ps1">functions\Clear-DbaWaitStatistics.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Connect-DbaInstance_ps1">functions\Connect-DbaInstance.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaAgentAlert_ps1">functions\Copy-DbaAgentAlert.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaAgentCategory_ps1">functions\Copy-DbaAgentCategory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaAgentJob_ps1">functions\Copy-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaAgentOperator_ps1">functions\Copy-DbaAgentOperator.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaAgentProxyAccount_ps1">functions\Copy-DbaAgentProxyAccount.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaAgentSharedSchedule_ps1">functions\Copy-DbaAgentSharedSchedule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaBackupDevice_ps1">functions\Copy-DbaBackupDevice.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaCentralManagementServer_ps1">functions\Copy-DbaCentralManagementServer.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaCredential_ps1">functions\Copy-DbaCredential.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaCustomError_ps1">functions\Copy-DbaCustomError.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaDatabase_ps1">functions\Copy-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaDatabaseAssembly_ps1">functions\Copy-DbaDatabaseAssembly.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaDatabaseMail_ps1">functions\Copy-DbaDatabaseMail.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaEndpoint_ps1">functions\Copy-DbaEndpoint.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaExtendedEvent_ps1">functions\Copy-DbaExtendedEvent.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaLinkedServer_ps1">functions\Copy-DbaLinkedServer.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaLogin_ps1">functions\Copy-DbaLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaQueryStoreConfig_ps1">functions\Copy-DbaQueryStoreConfig.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaResourceGovernor_ps1">functions\Copy-DbaResourceGovernor.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaServerAudit_ps1">functions\Copy-DbaServerAudit.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaServerAuditSpecification_ps1">functions\Copy-DbaServerAuditSpecification.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaServerTrigger_ps1">functions\Copy-DbaServerTrigger.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSpConfigure_ps1">functions\Copy-DbaSpConfigure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSqlDataCollector_ps1">functions\Copy-DbaSqlDataCollector.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSqlPolicyManagement_ps1">functions\Copy-DbaSqlPolicyManagement.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSqlServerAgent_ps1">functions\Copy-DbaSqlServerAgent.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSsisCatalog_ps1">functions\Copy-DbaSsisCatalog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSysDbUserObject_ps1">functions\Copy-DbaSysDbUserObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Disable-DbaAgHadr_ps1">functions\Disable-DbaAgHadr.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Disable-DbaForceNetworkEncryption_ps1">functions\Disable-DbaForceNetworkEncryption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Dismount-DbaDatabase_ps1">functions\Dismount-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Enable-DbaAgHadr_ps1">functions\Enable-DbaAgHadr.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Enable-DbaForceNetworkEncryption_ps1">functions\Enable-DbaForceNetworkEncryption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Expand-DbaTLogResponsibly_ps1">functions\Expand-DbaTLogResponsibly.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaAvailabilityGroup_ps1">functions\Export-DbaAvailabilityGroup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaDiagnosticQuery_ps1">functions\Export-DbaDiagnosticQuery.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaExecutionPlan_ps1">functions\Export-DbaExecutionPlan.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaLogin_ps1">functions\Export-DbaLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaScript_ps1">functions\Export-DbaScript.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaSpConfigure_ps1">functions\Export-DbaSpConfigure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaUser_ps1">functions\Export-DbaUser.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaAgentJob_ps1">functions\Find-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaCommand_ps1">functions\Find-DbaCommand.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaDatabase_ps1">functions\Find-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaDatabaseGrowthEvent_ps1">functions\Find-DbaDatabaseGrowthEvent.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaDuplicateIndex_ps1">functions\Find-DbaDuplicateIndex.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaLoginInGroup_ps1">functions\Find-DbaLoginInGroup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaOrphanedFile_ps1">functions\Find-DbaOrphanedFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaSimilarTable_ps1">functions\Find-DbaSimilarTable.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaStoredProcedure_ps1">functions\Find-DbaStoredProcedure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaTrigger_ps1">functions\Find-DbaTrigger.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaUnusedIndex_ps1">functions\Find-DbaUnusedIndex.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaUserObject_ps1">functions\Find-DbaUserObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaView_ps1">functions\Find-DbaView.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgDatabase_ps1">functions\Get-DbaAgDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentAlert_ps1">functions\Get-DbaAgentAlert.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJob_ps1">functions\Get-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJobHistory_ps1">functions\Get-DbaAgentJobHistory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJobOutputFile_ps1">functions\Get-DbaAgentJobOutputFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentLog_ps1">functions\Get-DbaAgentLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentOperator_ps1">functions\Get-DbaAgentOperator.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentSchedule_ps1">functions\Get-DbaAgentSchedule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgHadr_ps1">functions\Get-DbaAgHadr.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgListener_ps1">functions\Get-DbaAgListener.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgReplica_ps1">functions\Get-DbaAgReplica.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAvailabilityGroup_ps1">functions\Get-DbaAvailabilityGroup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAvailableCollation_ps1">functions\Get-DbaAvailableCollation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaBackupDevice_ps1">functions\Get-DbaBackupDevice.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaBackupHistory_ps1">functions\Get-DbaBackupHistory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaClientProtocol_ps1">functions\Get-DbaClientProtocol.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaClusterActiveNode_ps1">functions\Get-DbaClusterActiveNode.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaCmConnection_ps1">functions\Get-DbaCmConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaCmObject_ps1">functions\Get-DbaCmObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaComputerCertificate_ps1">functions\Get-DbaComputerCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaComputerSystem_ps1">functions\Get-DbaComputerSystem.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaConfig_ps1">functions\Get-DbaConfig.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaConfigValue_ps1">functions\Get-DbaConfigValue.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaCredential_ps1">functions\Get-DbaCredential.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaCustomError_ps1">functions\Get-DbaCustomError.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabase_ps1">functions\Get-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseAssembly_ps1">functions\Get-DbaDatabaseAssembly.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseCertificate_ps1">functions\Get-DbaDatabaseCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseEncryption_ps1">functions\Get-DbaDatabaseEncryption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseFile_ps1">functions\Get-DbaDatabaseFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseMasterKey_ps1">functions\Get-DbaDatabaseMasterKey.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabasePartitionFunction_ps1">functions\Get-DbaDatabasePartitionFunction.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabasePartitionScheme_ps1">functions\Get-DbaDatabasePartitionScheme.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseSnapshot_ps1">functions\Get-DbaDatabaseSnapshot.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseSpace_ps1">functions\Get-DbaDatabaseSpace.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseState_ps1">functions\Get-DbaDatabaseState.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseUdf_ps1">functions\Get-DbaDatabaseUdf.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseUser_ps1">functions\Get-DbaDatabaseUser.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseView_ps1">functions\Get-DbaDatabaseView.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbMailHistory_ps1">functions\Get-DbaDbMailHistory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbMailLog_ps1">functions\Get-DbaDbMailLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbQueryStoreOptions_ps1">functions\Get-DbaDbQueryStoreOptions.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbStoredProcedure_ps1">functions\Get-DbaDbStoredProcedure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDefaultPath_ps1">functions\Get-DbaDefaultPath.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDependency_ps1">functions\Get-DbaDependency.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDetachedDatabaseInfo_ps1">functions\Get-DbaDetachedDatabaseInfo.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDiskSpace_ps1">functions\Get-DbaDiskSpace.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaEndpoint_ps1">functions\Get-DbaEndpoint.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaEstimatedCompletionTime_ps1">functions\Get-DbaEstimatedCompletionTime.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaExecutionPlan_ps1">functions\Get-DbaExecutionPlan.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaFile_ps1">functions\Get-DbaFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaForceNetworkEncryption_ps1">functions\Get-DbaForceNetworkEncryption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaHelpIndex_ps1">functions\Get-DbaHelpIndex.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaJobCategory_ps1">functions\Get-DbaJobCategory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLastBackup_ps1">functions\Get-DbaLastBackup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLastGoodCheckDb_ps1">functions\Get-DbaLastGoodCheckDb.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLinkedServer_ps1">functions\Get-DbaLinkedServer.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLocaleSetting_ps1">functions\Get-DbaLocaleSetting.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLogin_ps1">functions\Get-DbaLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaMaintenanceSolutionLog_ps1">functions\Get-DbaMaintenanceSolutionLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaMaxMemory_ps1">functions\Get-DbaMaxMemory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaMemoryUsage_ps1">functions\Get-DbaMemoryUsage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaMsdtc_ps1">functions\Get-DbaMsdtc.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaNetworkActivity_ps1">functions\Get-DbaNetworkActivity.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaNetworkCertificate_ps1">functions\Get-DbaNetworkCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaOperatingSystem_ps1">functions\Get-DbaOperatingSystem.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaPageFileSetting_ps1">functions\Get-DbaPageFileSetting.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaPermission_ps1">functions\Get-DbaPermission.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaPolicy_ps1">functions\Get-DbaPolicy.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaPrivilege_ps1">functions\Get-DbaPrivilege.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaProcess_ps1">functions\Get-DbaProcess.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaQueryExecutionTime_ps1">functions\Get-DbaQueryExecutionTime.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRegisteredServer_ps1">functions\Get-DbaRegisteredServer.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRegisteredServersStore_ps1">functions\Get-DbaRegisteredServersStore.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRestoreHistory_ps1">functions\Get-DbaRestoreHistory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRoleMember_ps1">functions\Get-DbaRoleMember.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRunningJob_ps1">functions\Get-DbaRunningJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSchemaChangeHistory_ps1">functions\Get-DbaSchemaChangeHistory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaServerAudit_ps1">functions\Get-DbaServerAudit.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaServerAuditSpecification_ps1">functions\Get-DbaServerAuditSpecification.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaServerInstallDate_ps1">functions\Get-DbaServerInstallDate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaServerProtocol_ps1">functions\Get-DbaServerProtocol.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSpConfigure_ps1">functions\Get-DbaSpConfigure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSpn_ps1">functions\Get-DbaSpn.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlBuildReference_ps1">functions\Get-DbaSqlBuildReference.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlInstanceProperty_ps1">functions\Get-DbaSqlInstanceProperty.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlInstanceUserOption_ps1">functions\Get-DbaSqlInstanceUserOption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlLog_ps1">functions\Get-DbaSqlLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlManagementObject_ps1">functions\Get-DbaSqlManagementObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlModule_ps1">functions\Get-DbaSqlModule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlProductKey_ps1">functions\Get-DbaSqlProductKey.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlRegistryRoot_ps1">functions\Get-DbaSqlRegistryRoot.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlService_ps1">functions\Get-DbaSqlService.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSsisEnvironmentVariable_ps1">functions\Get-DbaSsisEnvironmentVariable.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaStartupParameter_ps1">functions\Get-DbaStartupParameter.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSuspectPage_ps1">functions\Get-DbaSuspectPage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTable_ps1">functions\Get-DbaTable.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTcpPort_ps1">functions\Get-DbaTcpPort.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTempdbUsage_ps1">functions\Get-DbaTempdbUsage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbatoolsLog_ps1">functions\Get-DbatoolsLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTraceFile_ps1">functions\Get-DbaTraceFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTraceFlag_ps1">functions\Get-DbaTraceFlag.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTrigger_ps1">functions\Get-DbaTrigger.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaUptime_ps1">functions\Get-DbaUptime.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaUserLevelPermission_ps1">functions\Get-DbaUserLevelPermission.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaWaitStatistic_ps1">functions\Get-DbaWaitStatistic.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaWindowsLog_ps1">functions\Get-DbaWindowsLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Import-DbaCsvToSql_ps1">functions\Import-DbaCsvToSql.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Import-DbaSpConfigure_ps1">functions\Import-DbaSpConfigure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Install-DbaFirstResponderKit_ps1">functions\Install-DbaFirstResponderKit.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Install-DbaMaintenanceSolution_ps1">functions\Install-DbaMaintenanceSolution.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Install-DbaWatchUpdate_ps1">functions\Install-DbaWatchUpdate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Install-DbaWhoIsActive_ps1">functions\Install-DbaWhoIsActive.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaCycleErrorLog_ps1">functions\Invoke-DbaCycleErrorLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDatabaseShrink_ps1">functions\Invoke-DbaDatabaseShrink.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDatabaseUpgrade_ps1">functions\Invoke-DbaDatabaseUpgrade.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDiagnosticQuery_ps1">functions\Invoke-DbaDiagnosticQuery.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaLogShipping_ps1">functions\Invoke-DbaLogShipping.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaLogShippingRecovery_ps1">functions\Invoke-DbaLogShippingRecovery.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaWhoisActive_ps1">functions\Invoke-DbaWhoisActive.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-SqlCmd2_ps1">functions\Invoke-SqlCmd2.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Measure-DbaBackupThroughput_ps1">functions\Measure-DbaBackupThroughput.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Mount-DbaDatabase_ps1">functions\Mount-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentJob_ps1">functions\New-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentJobStep_ps1">functions\New-DbaAgentJobStep.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentSchedule_ps1">functions\New-DbaAgentSchedule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaCmConnection_ps1">functions\New-DbaCmConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaComputerCertificate_ps1">functions\New-DbaComputerCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaCredential_ps1">functions\New-DbaCredential.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaDatabaseCertificate_ps1">functions\New-DbaDatabaseCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaDatabaseMasterKey_ps1">functions\New-DbaDatabaseMasterKey.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaDatabaseSnapshot_ps1">functions\New-DbaDatabaseSnapshot.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaLogin_ps1">functions\New-DbaLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaScriptingOption_ps1">functions\New-DbaScriptingOption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaServiceMasterKey_ps1">functions\New-DbaServiceMasterKey.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaSqlConnectionString_ps1">functions\New-DbaSqlConnectionString.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaSqlConnectionStringBuilder_ps1">functions\New-DbaSqlConnectionStringBuilder.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaSqlDirectory_ps1">functions\New-DbaSqlDirectory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaSsisCatalog_ps1">functions\New-DbaSsisCatalog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbatoolsSupportPackage_ps1">functions\New-DbatoolsSupportPackage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Out-DbaDataTable_ps1">functions\Out-DbaDataTable.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Read-DbaBackupHeader_ps1">functions\Read-DbaBackupHeader.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Read-DbaTraceFile_ps1">functions\Read-DbaTraceFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Read-DbaTransactionLog_ps1">functions\Read-DbaTransactionLog.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaAgentJob_ps1">functions\Remove-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaAgentJobStep_ps1">functions\Remove-DbaAgentJobStep.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaAgentSchedule_ps1">functions\Remove-DbaAgentSchedule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaBackup_ps1">functions\Remove-DbaBackup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaCmConnection_ps1">functions\Remove-DbaCmConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaComputerCertificate_ps1">functions\Remove-DbaComputerCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabase_ps1">functions\Remove-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabaseCertificate_ps1">functions\Remove-DbaDatabaseCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabaseMasterKey_ps1">functions\Remove-DbaDatabaseMasterKey.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabaseSafely_ps1">functions\Remove-DbaDatabaseSafely.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabaseSnapshot_ps1">functions\Remove-DbaDatabaseSnapshot.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaNetworkCertificate_ps1">functions\Remove-DbaNetworkCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaOrphanUser_ps1">functions\Remove-DbaOrphanUser.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaSpn_ps1">functions\Remove-DbaSpn.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Rename-DbaLogin_ps1">functions\Rename-DbaLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Repair-DbaOrphanUser_ps1">functions\Repair-DbaOrphanUser.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Repair-DbaServerName_ps1">functions\Repair-DbaServerName.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Reset-DbaAdmin_ps1">functions\Reset-DbaAdmin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Resolve-DbaNetworkName_ps1">functions\Resolve-DbaNetworkName.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restart-DbaSqlService_ps1">functions\Restart-DbaSqlService.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DbaBackupFromDirectory_ps1">functions\Restore-DbaBackupFromDirectory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DbaDatabase_ps1">functions\Restore-DbaDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DbaDatabaseCertificate_ps1">functions\Restore-DbaDatabaseCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DbaFromDatabaseSnapshot_ps1">functions\Restore-DbaFromDatabaseSnapshot.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Save-DbaDiagnosticQueryScript_ps1">functions\Save-DbaDiagnosticQueryScript.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaAgentJob_ps1">functions\Set-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaAgentJobOutputFile_ps1">functions\Set-DbaAgentJobOutputFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaAgentJobStep_ps1">functions\Set-DbaAgentJobStep.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaAgentSchedule_ps1">functions\Set-DbaAgentSchedule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaCmConnection_ps1">functions\Set-DbaCmConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaConfig_ps1">functions\Set-DbaConfig.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDatabaseOwner_ps1">functions\Set-DbaDatabaseOwner.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDatabaseState_ps1">functions\Set-DbaDatabaseState.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDbCompression_ps1">functions\Set-DbaDbCompression.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDbQueryStoreOptions_ps1">functions\Set-DbaDbQueryStoreOptions.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaJobOwner_ps1">functions\Set-DbaJobOwner.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaMaxDop_ps1">functions\Set-DbaMaxDop.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaMaxMemory_ps1">functions\Set-DbaMaxMemory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaNetworkCertificate_ps1">functions\Set-DbaNetworkCertificate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaPowerPlan_ps1">functions\Set-DbaPowerPlan.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaPrivilege_ps1">functions\Set-DbaPrivilege.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaSpConfigure_ps1">functions\Set-DbaSpConfigure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaSpn_ps1">functions\Set-DbaSpn.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaStartupParameter_ps1">functions\Set-DbaStartupParameter.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaTcpPort_ps1">functions\Set-DbaTcpPort.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaTempDbConfiguration_ps1">functions\Set-DbaTempDbConfiguration.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Show-DbaDatabaseList_ps1">functions\Show-DbaDatabaseList.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Show-DbaServerFileSystem_ps1">functions\Show-DbaServerFileSystem.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaMigration_ps1">functions\Start-DbaMigration.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaSqlService_ps1">functions\Start-DbaSqlService.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaProcess_ps1">functions\Stop-DbaProcess.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaSqlService_ps1">functions\Stop-DbaSqlService.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Sync-DbaSqlLoginPermission_ps1">functions\Sync-DbaSqlLoginPermission.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaCmConnection_ps1">functions\Test-DbaCmConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaConnection_ps1">functions\Test-DbaConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaConnectionAuthScheme_ps1">functions\Test-DbaConnectionAuthScheme.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDatabaseCollation_ps1">functions\Test-DbaDatabaseCollation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDatabaseCompatibility_ps1">functions\Test-DbaDatabaseCompatibility.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDatabaseOwner_ps1">functions\Test-DbaDatabaseOwner.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDbCompression_ps1">functions\Test-DbaDbCompression.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDiskAlignment_ps1">functions\Test-DbaDiskAlignment.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDiskAllocation_ps1">functions\Test-DbaDiskAllocation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaFullRecoveryModel_ps1">functions\Test-DbaFullRecoveryModel.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaIdentityUsage_ps1">functions\Test-DbaIdentityUsage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaJobOwner_ps1">functions\Test-DbaJobOwner.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLastBackup_ps1">functions\Test-DbaLastBackup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLinkedServerConnection_ps1">functions\Test-DbaLinkedServerConnection.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaMaxDop_ps1">functions\Test-DbaMaxDop.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaMaxMemory_ps1">functions\Test-DbaMaxMemory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaMigrationConstraint_ps1">functions\Test-DbaMigrationConstraint.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaNetworkLatency_ps1">functions\Test-DbaNetworkLatency.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaOptimizeForAdHoc_ps1">functions\Test-DbaOptimizeForAdHoc.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaPowerPlan_ps1">functions\Test-DbaPowerPlan.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaServerName_ps1">functions\Test-DbaServerName.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaSpn_ps1">functions\Test-DbaSpn.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaSqlManagementObject_ps1">functions\Test-DbaSqlManagementObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaSqlPath_ps1">functions\Test-DbaSqlPath.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaTempDbConfiguration_ps1">functions\Test-DbaTempDbConfiguration.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaValidLogin_ps1">functions\Test-DbaValidLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaVirtualLogFile_ps1">functions\Test-DbaVirtualLogFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Uninstall-DbaWatchUpdate_ps1">functions\Uninstall-DbaWatchUpdate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-dbatools_ps1">functions\Update-dbatools.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Watch-DbaDbLogin_ps1">functions\Watch-DbaDbLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Watch-DbaUpdate_ps1">functions\Watch-DbaUpdate.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Write-DbaDataTable_ps1">functions\Write-DbaDataTable.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Connect-AsServer_ps1">internal\Connect-AsServer.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Connect-SqlInstance_ps1">internal\Connect-SqlInstance.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Convert-ByteToHexString_ps1">internal\Convert-ByteToHexString.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Convert-DbVersionToSqlVersion_ps1">internal\Convert-DbVersionToSqlVersion.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Convert-HexStringToByte_ps1">internal\Convert-HexStringToByte.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-CodePage_ps1">internal\Get-CodePage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaADObject_ps1">internal\Get-DbaADObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaService_ps1">internal\Get-DbaService.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DBASQLServiceErrorMessage_ps1">internal\Get-DBASQLServiceErrorMessage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DirectoryRestoreFile_ps1">internal\Get-DirectoryRestoreFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-FilteredRestoreFile_ps1">internal\Get-FilteredRestoreFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-JobList_ps1">internal\Get-JobList.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-Language_ps1">internal\Get-Language.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-OfflineSqlFileStructure_ps1">internal\Get-OfflineSqlFileStructure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-OlaHRestoreFile_ps1">internal\Get-OlaHRestoreFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-PasswordHash_ps1">internal\Get-PasswordHash.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-RestoreContinuableDatabase_ps1">internal\Get-RestoreContinuableDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-SaLoginName_ps1">internal\Get-SaLoginName.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-SmoServerForDynamicParams_ps1">internal\Get-SmoServerForDynamicParams.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-SqlDefaultPaths_ps1">internal\Get-SqlDefaultPaths.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-SqlDefaultSpConfigure_ps1">internal\Get-SqlDefaultSpConfigure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-SqlFileStructure_ps1">internal\Get-SqlFileStructure.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-SqlSaLogin_ps1">internal\Get-SqlSaLogin.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-XpDirTreeRestoreFile_ps1">internal\Get-XpDirTreeRestoreFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Import-OldSmo_ps1">internal\Import-OldSmo.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-Command2_ps1">internal\Invoke-Command2.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDiagnosticQueryScriptParser_ps1">internal\Invoke-DbaDiagnosticQueryScriptParser.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-ManagedComputerCommand_ps1">internal\Invoke-ManagedComputerCommand.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-SmoCheck_ps1">internal\Invoke-SmoCheck.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-TagCommand_ps1">internal\Invoke-TagCommand.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Join-AdminUnc_ps1">internal\Join-AdminUnc.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaLogShippingPrimaryDatabase_ps1">internal\New-DbaLogShippingPrimaryDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaLogShippingPrimarySecondary_ps1">internal\New-DbaLogShippingPrimarySecondary.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaLogShippingSecondaryDatabase_ps1">internal\New-DbaLogShippingSecondaryDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaLogShippingSecondaryPrimary_ps1">internal\New-DbaLogShippingSecondaryPrimary.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaTeppCompletionResult_ps1">internal\New-DbaTeppCompletionResult.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaConfigHandler_ps1">internal\Register-DbaConfigHandler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaTeppArgumentCompleter_ps1">internal\Register-DbaTeppArgumentCompleter.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaTeppInstanceCacheBuilder_ps1">internal\Register-DbaTeppInstanceCacheBuilder.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaTeppScriptBlock_ps1">internal\Register-DbaTeppScriptBlock.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-SqlDatabase_ps1">internal\Remove-SqlDatabase.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Rename-LogicalFile_ps1">internal\Rename-LogicalFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Resolve-IpAddress_ps1">internal\Resolve-IpAddress.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Resolve-NetBiosName_ps1">internal\Resolve-NetBiosName.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Resolve-SqlIpAddress_ps1">internal\Resolve-SqlIpAddress.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-Database_ps1">internal\Restore-Database.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DBFromFilteredArray_ps1">internal\Restore-DBFromFilteredArray.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Select-DefaultView_ps1">internal\Select-DefaultView.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-ServiceStartMode_ps1">internal\Set-ServiceStartMode.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Show-Notification_ps1">internal\Show-Notification.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbccCheck_ps1">internal\Start-DbccCheck.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-Function_ps1">internal\Stop-Function.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-Bound_ps1">internal\Test-Bound.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-ComputerTarget_ps1">internal\Test-ComputerTarget.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDeprecation_ps1">internal\Test-DbaDeprecation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLsnChain_ps1">internal\Test-DbaLsnChain.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaRestoreVersion_ps1">internal\Test-DbaRestoreVersion.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-ElevationRequirement_ps1">internal\Test-ElevationRequirement.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-FunctionInterrupt_ps1">internal\Test-FunctionInterrupt.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-HostOSLinux_ps1">internal\Test-HostOSLinux.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-PSRemoting_ps1">internal\Test-PSRemoting.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-SqlAgent_ps1">internal\Test-SqlAgent.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-SqlLoginAccess_ps1">internal\Test-SqlLoginAccess.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-SqlQueryComplete_ps1">internal\Test-SqlQueryComplete.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-SqlSa_ps1">internal\Test-SqlSa.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-type-extensions_ps1">internal\type-extensions.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-ServiceStatus_ps1">internal\Update-ServiceStatus.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-SqlDbOwner_ps1">internal\Update-SqlDbOwner.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-SqlDbReadOnly_ps1">internal\Update-SqlDbReadOnly.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-SqlPermissions_ps1">internal\Update-SqlPermissions.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Where-DbaObject_ps1">internal\Where-DbaObject.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Write-Exception_ps1">internal\Write-Exception.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Write-HostColor_ps1">internal\Write-HostColor.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Write-Message_ps1">internal\Write-Message.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Compress-Archive_ps1">optional\Compress-Archive.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Expand-Archive_ps1">optional\Expand-Archive.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-GenericArgumentCompleter_ps1">optional\Get-GenericArgumentCompleter.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-TabExpansionPlusPlus_ps1">optional\TabExpansionPlusPlus.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Add-DbaComputerCertificate_Tests_ps1">tests\Add-DbaComputerCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-appveyor_pester_ps1">tests\appveyor.pester.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-appveyor_prep_ps1">tests\appveyor.prep.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-appveyor_SQL2008R2SP2_ps1">tests\appveyor.SQL2008R2SP2.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-appveyor_SQL2016_ps1">tests\appveyor.SQL2016.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-appveyor_sqlserver_ps1">tests\appveyor.sqlserver.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Backup-DbaDatabase_Tests_ps1">tests\Backup-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Clear-DbaWaitStatistics_Tests_ps1">tests\Clear-DbaWaitStatistics.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Connect-DbaInstance_Tests_ps1">tests\Connect-DbaInstance.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Connect-SqlInstance_Tests_ps1">tests\Connect-SqlInstance.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-constants_ps1">tests\constants.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaBackupDevice_Tests_ps1">tests\Copy-DbaBackupDevice.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaCentralManagementServer_Tests_ps1">tests\Copy-DbaCentralManagementServer.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaCredential_Tests_ps1">tests\Copy-DbaCredential.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaDatabase_Tests_ps1">tests\Copy-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaLinkedServer_Tests_ps1">tests\Copy-DbaLinkedServer.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaLogin_Tests_ps1">tests\Copy-DbaLogin.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaServerTrigger_Tests_ps1">tests\Copy-DbaServerTrigger.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaSpConfigure_Tests_ps1">tests\Copy-DbaSpConfigure.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-dbatools_Tests_ps1">tests\dbatools.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Disable-DbaAgHadr_Tests_ps1">tests\Disable-DbaAgHadr.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Dismount-DbaDatabase_Tests_ps1">tests\Dismount-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Enable-DbaAgHadr_Tests_ps1">tests\Enable-DbaAgHadr.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Export-DbaDiagnosticQuery_Tests_ps1">tests\Export-DbaDiagnosticQuery.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaOrphanedFile_Tests_ps1">tests\Find-DbaOrphanedFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaSimilarTable_Tests_ps1">tests\Find-DbaSimilarTable.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgDatabase_Tests_ps1">tests\Get-DbaAgDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJob_Tests_ps1">tests\Get-DbaAgentJob.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJobOutputFile_Tests_ps1">tests\Get-DbaAgentJobOutputFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgHadr_Tests_ps1">tests\Get-DbaAgHadr.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgReplica_Tests_ps1">tests\Get-DbaAgReplica.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAvailabilityGroup_Tests_ps1">tests\Get-DbaAvailabilityGroup.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAvailableCollation_Tests_ps1">tests\Get-DbaAvailableCollation.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaBackupHistory_Tests_ps1">tests\Get-DbaBackupHistory.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaClientProtocol_Tests_ps1">tests\Get-DbaClientProtocol.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaComputerCertificate_Tests_ps1">tests\Get-DbaComputerCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaComputerSystem_Tests_ps1">tests\Get-DbaComputerSystem.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabase_Tests_ps1">tests\Get-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseEncryption_Tests_ps1">tests\Get-DbaDatabaseEncryption.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseSnapshot_Tests_ps1">tests\Get-DbaDatabaseSnapshot.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbQueryStoreOptions_Tests_ps1">tests\Get-DbaDbQueryStoreOptions.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbStoredProcedure_Tests_ps1">tests\Get-DbaDbStoredProcedure.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDiskSpace_Tests_ps1">tests\Get-DbaDiskSpace.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaFile_Tests_ps1">tests\Get-DbaFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLastBackup_Tests_ps1">tests\Get-DbaLastBackup.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaLogin_Tests_ps1">tests\Get-DbaLogin.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaMaxMemory_Tests_ps1">tests\Get-DbaMaxMemory.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaOperatingSystem_Tests_ps1">tests\Get-DbaOperatingSystem.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaPolicy_Tests_ps1">tests\Get-DbaPolicy.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaProcess_Tests_ps1">tests\Get-DbaProcess.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRegisteredServer_Tests_ps1">tests\Get-DbaRegisteredServer.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRegisteredServersStore_Tests_ps1">tests\Get-DbaRegisteredServersStore.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSchemaChangeHistory_Tests_ps1">tests\Get-DbaSchemaChangeHistory.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaServerProtocol_Tests_ps1">tests\Get-DbaServerProtocol.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSpConfigure_Tests_ps1">tests\Get-DbaSpConfigure.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlBuildReference_Tests_ps1">tests\Get-DbaSqlBuildReference.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlLog_Tests_ps1">tests\Get-DbaSqlLog.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlModule_Tests_ps1">tests\Get-DbaSqlModule.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlRegistryRoot_Tests_ps1">tests\Get-DbaSqlRegistryRoot.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSqlService_Tests_ps1">tests\Get-DbaSqlService.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaSuspectPage_Tests_ps1">tests\Get-DbaSuspectPage.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTraceFile_Tests_ps1">tests\Get-DbaTraceFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTraceFlag_Tests_ps1">tests\Get-DbaTraceFlag.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaUserLevelPermission_Tests_ps1">tests\Get-DbaUserLevelPermission.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaWaitStatistic_Tests_ps1">tests\Get-DbaWaitStatistic.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DirectoryRestoreFile_Tests_ps1">tests\Get-DirectoryRestoreFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-FilteredRestoreFile_Tests_ps1">tests\Get-FilteredRestoreFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-OlaHRestoreFile_Tests_ps1">tests\Get-OlaHRestoreFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-XpDirTreeRestoreFile_Tests_ps1">tests\Get-XpDirTreeRestoreFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-InModule_Help_Exceptions_ps1">tests\InModule.Help.Exceptions.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-InModule_Help_Tests_ps1">tests\InModule.Help.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Install-DbaMaintenanceSolution_Tests_ps1">tests\Install-DbaMaintenanceSolution.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaCycleErrorLog_Tests_ps1">tests\Invoke-DbaCycleErrorLog.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDiagnosticQuery_Tests_ps1">tests\Invoke-DbaDiagnosticQuery.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-manual_pester_ps1">tests\manual.pester.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Measure-DbaBackupThroughput_Tests_ps1">tests\Measure-DbaBackupThroughput.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Mount-DbaDatabase_Tests_ps1">tests\Mount-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentJob_Tests_ps1">tests\New-DbaAgentJob.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentJobStep_Tests_ps1">tests\New-DbaAgentJobStep.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaComputerCertificate_Tests_ps1">tests\New-DbaComputerCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaCredential_Tests_ps1">tests\New-DbaCredential.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaDatabaseSnapshot_Tests_ps1">tests\New-DbaDatabaseSnapshot.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaLogin_Tests_ps1">tests\New-DbaLogin.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaSqlConnectionStringBuilder_Tests_ps1">tests\New-DbaSqlConnectionStringBuilder.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaSsisCatalog_Tests_ps1">tests\New-DbaSsisCatalog.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Out-DbaDataTable_Tests_ps1">tests\Out-DbaDataTable.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-pester_groups_ps1">tests\pester.groups.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaComputerCertificate_Tests_ps1">tests\Remove-DbaComputerCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabase_Tests_ps1">tests\Remove-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabaseSnapshot_Tests_ps1">tests\Remove-DbaDatabaseSnapshot.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restart-DbaSqlService_Tests_ps1">tests\Restart-DbaSqlService.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DbaDatabase_Tests_ps1">tests\Restore-DbaDatabase.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Restore-DbaFromDatabaseSnapshot_Tests_ps1">tests\Restore-DbaFromDatabaseSnapshot.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDatabaseState_Tests_ps1">tests\Set-DbaDatabaseState.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDbQueryStoreOptions_Tests_ps1">tests\Set-DbaDbQueryStoreOptions.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaMaxMemory_Tests_ps1">tests\Set-DbaMaxMemory.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaSpConfigure_Tests_ps1">tests\Set-DbaSpConfigure.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaSqlService_Tests_ps1">tests\Start-DbaSqlService.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaSqlService_Tests_ps1">tests\Stop-DbaSqlService.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-Function_Tests_ps1">tests\Stop-Function.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaConnection_Tests_ps1">tests\Test-DbaConnection.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDatabaseOwner_Tests_ps1">tests\Test-DbaDatabaseOwner.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaDbCompression_Tests_ps1">tests\Test-DbaDbCompression.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaIdentityUsage_Tests_ps1">tests\Test-DbaIdentityUsage.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLastBackup_Tests_ps1">tests\Test-DbaLastBackup.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLsnChain_Tests_ps1">tests\Test-DbaLsnChain.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaMaxMemory_Tests_ps1">tests\Test-DbaMaxMemory.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaNetworkLatency_Tests_ps1">tests\Test-DbaNetworkLatency.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaTempDbConfiguration_Tests_ps1">tests\Test-DbaTempDbConfiguration.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Watch-DbaDbLogin_Tests_ps1">tests\Watch-DbaDbLogin.Tests.ps1</File>
+    <File Build="2">xml\dbatools.Format.ps1xml</File>
+    <File Build="2">bin\smo\Microsoft.AnalysisServices.AppLocal.Core.dll</File>
+    <File Build="2">bin\smo\Microsoft.AnalysisServices.AppLocal.dll</File>
+    <File Build="2">bin\smo\Microsoft.AnalysisServices.AppLocal.Tabular.dll</File>
+    <File Build="2">bin\smo\Microsoft.Azure.KeyVault.dll</File>
+    <File Build="2">bin\smo\Microsoft.Azure.KeyVault.WebKey.dll</File>
+    <File Build="2">bin\smo\Microsoft.Data.Tools.Schema.Sql.dll</File>
+    <File Build="2">bin\smo\Microsoft.Data.Tools.Utilities.dll</File>
+    <File Build="2">bin\smo\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</File>
+    <File Build="2">bin\smo\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</File>
+    <File Build="2">bin\smo\Microsoft.Rest.ClientRuntime.Azure.dll</File>
+    <File Build="2">bin\smo\Microsoft.Rest.ClientRuntime.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.AzureStorageEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.BatchParser.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.BatchParserClient.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.ConnectionInfo.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.ConnectionInfoExtended.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Dac.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Dac.Extensions.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Diagnostics.Strace.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Dmf.Common.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Dmf.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.AlwaysEncrypted.Management.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.AlwaysEncrypted.Types.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.AzureAuthenticationManagement.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.CloudAdapter.Client.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.CloudAdapter.Data.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.Collector.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.CollectorEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.Dac.UniversalAuthProvider.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.HadrDmf.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.InMemoryOLTPMigrationAdvisor.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.IntegrationServicesEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.RegisteredServers.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.Sdk.Scripting.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.Sdk.Sfc.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.SDK.SqlStudio.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.SmartAdminPolicies.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.Utility.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.UtilityEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.XEvent.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.XEventDbScoped.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Management.XEventEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.OlapEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.PolicyEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.RegSvrEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.ReplEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.ServiceBrokerEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Smo.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.SmoExtended.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.SqlClrProvider.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.SqlEnum.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.SqlTDiagm.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.SqlWmiManagement.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.SString.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.TransactSql.ScriptDom.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.Types.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.WmiEnum.dll</File>
+    <File Build="2">bin\smo\msvcp120.dll</File>
+    <File Build="2">bin\smo\msvcr120.dll</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-assets_ps1">internal\configurations\assets.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-computermanagement_handler_ps1">internal\configurations\computermanagement.handler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-computermanagement_ps1">internal\configurations\computermanagement.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-configuration_ps1">internal\configurations\configuration.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-formatting_handler_ps1">internal\configurations\formatting.handler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-formatting_ps1">internal\configurations\formatting.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-logging_handler_ps1">internal\configurations\logging.handler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-logging_ps1">internal\configurations\logging.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-onetimenotifications_ps1">internal\configurations\onetimenotifications.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-paths_handler_ps1">internal\configurations\paths.handler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-paths_ps1">internal\configurations\paths.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-tabexpansion_handler_ps1">internal\configurations\tabexpansion.handler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-tabexpansion_ps1">internal\configurations\tabexpansion.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-userinteraction_handler_ps1">internal\configurations\userinteraction.handler.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-userinteraction_ps1">internal\configurations\userinteraction.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-alert_ps1">internal\dynamicparams\alert.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-alertcategory_ps1">internal\dynamicparams\alertcategory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-audit_ps1">internal\dynamicparams\audit.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-auditspecification_ps1">internal\dynamicparams\auditspecification.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-availabilitygroup_ps1">internal\dynamicparams\availabilitygroup.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-backupdevice_ps1">internal\dynamicparams\backupdevice.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-config_ps1">internal\dynamicparams\config.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-configname_ps1">internal\dynamicparams\configname.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-credential_ps1">internal\dynamicparams\credential.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-customerror_ps1">internal\dynamicparams\customerror.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-database_ps1">internal\dynamicparams\database.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-endpoint_ps1">internal\dynamicparams\endpoint.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-group_ps1">internal\dynamicparams\group.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-job_ps1">internal\dynamicparams\job.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-jobcategory_ps1">internal\dynamicparams\jobcategory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-linkedserver_ps1">internal\dynamicparams\linkedserver.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-login_ps1">internal\dynamicparams\login.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-mailaccount_ps1">internal\dynamicparams\mailaccount.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-mailprofile_ps1">internal\dynamicparams\mailprofile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-mailserver_ps1">internal\dynamicparams\mailserver.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-operator_ps1">internal\dynamicparams\operator.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-operatorcategory_ps1">internal\dynamicparams\operatorcategory.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-processHostname_ps1">internal\dynamicparams\processHostname.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-processProgram_ps1">internal\dynamicparams\processProgram.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-processSpid_ps1">internal\dynamicparams\processSpid.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-proxyaccount_ps1">internal\dynamicparams\proxyaccount.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-resourcepool_ps1">internal\dynamicparams\resourcepool.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-schedule_ps1">internal\dynamicparams\schedule.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-servertrigger_ps1">internal\dynamicparams\servertrigger.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-snapshot_ps1">internal\dynamicparams\snapshot.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-sqlinstance_ps1">internal\dynamicparams\sqlinstance.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-tag_ps1">internal\dynamicparams\tag.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-insertTepp_ps1">internal\scripts\insertTepp.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-logfilescript_ps1">internal\scripts\logfilescript.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-updateTeppAsync_ps1">internal\scripts\updateTeppAsync.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTopResourceUsage_ps1">functions\Get-DbaTopResourceUsage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaTopResourceUsage_Tests_ps1">tests\Get-DbaTopResourceUsage.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDatabaseClone_Tests_ps1">tests\Invoke-DbaDatabaseClone.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDatabaseClone_ps1">functions\Invoke-DbaDatabaseClone.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJobHistory_Tests_ps1">tests\Get-DbaAgentJobHistory.Tests.ps1</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.XE.Core.dll</File>
+    <File Build="2">bin\smo\Microsoft.SqlServer.XEvent.Linq.dll</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDistributor_ps1">functions\Get-DbaDistributor.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-DbaSqlServiceAccount_ps1">functions\Update-DbaSqlServiceAccount.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseState_ps1_2">tests\Get-DbaDatabaseState.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDistributor_Tests_ps1">tests\Get-DbaDistributor.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Update-DbaSqlServiceAccount_Tests_ps1">tests\Update-DbaSqlServiceAccount.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-session_ps1">internal\dynamicparams\session.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Disable-DbaTraceFlag_Tests_ps1">tests\Disable-DbaTraceFlag.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Enable-DbaTraceFlag_Tests_ps1">tests\Enable-DbaTraceFlag.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Disable-DbaTraceFlag_ps1">functions\Disable-DbaTraceFlag.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Enable-DbaTraceFlag_ps1">functions\Enable-DbaTraceFlag.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaAgentJob_ps1">functions\Start-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaAgentJob_ps1">functions\Stop-DbaAgentJob.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaAgentJob_Tests_ps1">tests\Start-DbaAgentJob.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaAgentJob_Tests_ps1">tests\Stop-DbaAgentJob.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaClientAlias_ps1">functions\Get-DbaClientAlias.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaClientAlias_ps1">functions\New-DbaClientAlias.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaClientAlias_ps1">functions\Remove-DbaClientAlias.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaClientAlias_Tests_ps1">tests\Get-DbaClientAlias.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaClientAlias_Tests_ps1">tests\New-DbaClientAlias.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentProxy_ps1">functions\New-DbaAgentProxy.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLogShippingStatus_ps1">functions\Test-DbaLogShippingStatus.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaAgentProxy_Tests_ps1">tests\New-DbaAgentProxy.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaClientAlias_Tests_ps1">tests\Remove-DbaClientAlias.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaLogShippingStatus_Tests_ps1">tests\Test-DbaLogShippingStatus.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Watch-DbaXESession_ps1">functions\Watch-DbaXESession.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Read-DbaXEFile_ps1">functions\Read-DbaXEFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaXESession_ps1">functions\Get-DbaXESession.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaXESessionTarget_ps1">functions\Get-DbaXESessionTarget.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaRunspace_ps1">internal\Get-DbaRunspace.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaMaintenanceTask_ps1">internal\Register-DbaMaintenanceTask.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaRunspace_ps1">internal\Register-DbaRunspace.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaRunspace_ps1">internal\Start-DbaRunspace.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaRunspace_ps1">internal\Stop-DbaRunspace.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaXESession_Tests_ps1">tests\Get-DbaXESession.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaXESessionTarget_Tests_ps1">tests\Get-DbaXESessionTarget.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Read-DbaXEFile_Tests_ps1">tests\Read-DbaXEFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Watch-DbaXESession_Tests_ps1">tests\Watch-DbaXESession.Tests.ps1</File>
+    <File Build="2">bin\stig.sql</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbVirtualLogFile_Tests_ps1">tests\Get-DbaDbVirtualLogFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaVirtualLogFile_Tests_ps1">tests\Test-DbaVirtualLogFile.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbVirtualLogFile_ps1">functions\Get-DbaDbVirtualLogFile.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Connect-DbaSqlServer_ps1">functions\Connect-DbaSqlServer.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDatabaseCorruption_Tests_ps1">tests\Invoke-DbaDatabaseCorruption.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaDatabaseCorruption_ps1">internal\Invoke-DbaDatabaseCorruption.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaBalanceDataFiles_ps1">functions\Invoke-DbaBalanceDataFiles.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Register-DbaConfig_ps1">functions\Register-DbaConfig.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-dbatools-maintenance_ps1">internal\scripts\dbatools-maintenance.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-smoLibraryImport_ps1">internal\scripts\smoLibraryImport.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaBackupInformation_ps1">functions\Get-DbaBackupInformation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaBackupInformation_Tests_ps1">tests\Get-DbaBackupInformation.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-SqlCmd2_Tests_ps1">tests\Invoke-SqlCmd2.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-manual_pester_coverage_ps1">tests\manual.pester.coverage.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaConnectionAuthScheme_Tests_ps1">tests\Test-DbaConnectionAuthScheme.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaSqlManagementObject_Tests_ps1">tests\Test-DbaSqlManagementObject.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaSqlPath_Tests_ps1">tests\Test-DbaSqlPath.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-PSRemoting_Tests_ps1">tests\Test-PSRemoting.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentOperator_Tests_ps1">tests\Get-DbaAgentOperator.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaXESession_ps1">functions\Start-DbaXESession.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaXESession_ps1">functions\Stop-DbaXESession.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Find-DbaDuplicateIndex_Tests_ps1">tests\Find-DbaDuplicateIndex.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Start-DbaXESession_Tests_ps1">tests\Start-DbaXESession.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Stop-DbaXESession_Tests_ps1">tests\Stop-DbaXESession.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbRecoveryModel_ps1">functions\Get-DbaDbRecoveryModel.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDbRecoveryModel_ps1">functions\Set-DbaDbRecoveryModel.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDatabaseCertificate_Tests_ps1">tests\Get-DbaDatabaseCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDbRecoveryModel_Tests_ps1">tests\Get-DbaDbRecoveryModel.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-New-DbaDatabaseCertificate_Tests_ps1">tests\New-DbaDatabaseCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDatabaseCertificate_Tests_ps1">tests\Remove-DbaDatabaseCertificate.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Set-DbaDbRecoveryModel_Tests_ps1">tests\Set-DbaDbRecoveryModel.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaRestore_ps1">functions\Invoke-DbaRestore.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Format-DbaBackupInformation_ps1">functions\Format-DbaBackupInformation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Select-DbaBackupInformation_ps1">functions\Select-DbaBackupInformation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaBackupInformation_ps1">functions\Test-DbaBackupInformation.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Copy-DbaTable_ps1">functions\Copy-DbaTable.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Invoke-DbaAdvancedRestore_ps1">functions\Invoke-DbaAdvancedRestore.ps1</File>
+    <File Build="2">bin\diagnosticquery\SQLServerDiagnosticQueries_2005_201710.sql</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Format-DbaBackupInformation_Tests_ps1">tests\Format-DbaBackupInformation.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJobStep_Tests_ps1">tests\Get-DbaAgentJobStep.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDump_Tests_ps1">tests\Get-DbaDump.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaWaitingTask_Tests_ps1">tests\Get-DbaWaitingTask.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDbUser_Tests_ps1">tests\Remove-DbaDbUser.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Select-DbaBackupInformation_Tests_ps1">tests\Select-DbaBackupInformation.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Test-DbaBackupInformation_Tests_ps1">tests\Test-DbaBackupInformation.Tests.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaDump_ps1">functions\Get-DbaDump.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaAgentJobStep_ps1">functions\Get-DbaAgentJobStep.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Remove-DbaDbUser_ps1">functions\Remove-DbaDbUser.ps1</File>
+    <File Build="2" Shared="True" ReferenceFunction="Invoke-Get-DbaWaitingTask_ps1">functions\Get-DbaWaitingTask.ps1</File>
+  </Files>
+  <StartupScript>
+  </StartupScript>
+</Project>

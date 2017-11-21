@@ -1,0 +1,20 @@
+﻿<Project Synchronized="True" SyncFilter="*.ps1;*.psm1;*.psd1;*.ps1xml;*.psf;*.pss;*.xml;*.yml;*.dll;*.md;*.txt">
+  <Version>2.0</Version>
+  <FileID>94133dcb-ebe3-4de5-a5e7-854cc2ddd75e</FileID>
+  <ProjectType>1</ProjectType>
+  <Folders>
+    <Folder>.vscode</Folder>
+    <Folder>bin</Folder>
+    <Folder>mssql</Folder>
+  </Folders>
+  <Files>
+    <File Build="2">summitlab.psd1</File>
+    <File Build="0">summitlab.psm1</File>
+    <File Build="2">docker-compose.yml</File>
+    <File Build="2">README.md</File>
+    <File Build="2">mssql\Dockerfile</File>
+    <File Build="2">.env</File>
+  </Files>
+  <StartupScript>
+  </StartupScript>
+</Project>
