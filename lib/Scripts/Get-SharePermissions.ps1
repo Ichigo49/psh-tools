@@ -38,7 +38,7 @@ function Get-SharePermissions {
 	param([Parameter(ValueFromPipeline=$True,
 		ValueFromPipelineByPropertyName=$True)]$Computer = '.') 
 
-	$shares = gwmi -Class win32_share -ComputerName $computer | select -ExpandProperty Name 
+	$shares = Get-WmiObject -Class win32_share -ComputerName $computer | select -ExpandProperty Name 
 	 
 	foreach ($share in $shares) { 
 		$acl = $null 

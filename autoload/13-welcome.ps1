@@ -17,8 +17,8 @@ Function Get-ProfileBanner {
     [string]$Up = [string]$UpTime.days + "days, " + [string]$UpTime.Hours + "h" + [string]$UpTime.Minutes + "m" + [string]$UpTime.Seconds + "s"
     $TimeZone = ([TimeZoneInfo]::Local).displayname
     $CsPhyicallyInstalledMemory = (get-wmiobject -class "win32_physicalmemory" -namespace "root\CIMV2").Capacity
-
-
+
+
     Write-Host -Object ("##########################") -ForegroundColor Cyan
     Write-Host -Object ("#ppppp   \ppppppppppppppp#") -NoNewline -ForegroundColor Cyan
     Write-Host -Object ("    $(Get-Date)") -ForegroundColor Green

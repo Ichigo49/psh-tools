@@ -115,33 +115,36 @@
 	END { }
 }
 
-function CheckPendingReboot {
+function Get-PendingReboot {
 	Param(
-		[String]$ComputerName = $env:COMPUTERNAME
+		[String[]]$ComputerName = $env:COMPUTERNAME
 	)
-	#Check Reboot Pending :
-	$Pending = $false
-	if (Get-RegKey -ComputerName $ComputerName -Key "Software\Microsoft\Windows\CurrentVersion\Component Based Servicing" -Name RebootPending)
-	{
-		$Pending = $true
-		$AutoUpdate = $false
-		if(Get-RegKey -ComputerName $ComputerName -Key "SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" -Name RebootRequired)
+	Import-Module PSRemoteRegistry
+	foreach ($Computer in $ComputerName) {
+		#Check Reboot Pending :
+		$Pending = $false
+		if (Get-RegKey -ComputerName $Computer -Key "Software\Microsoft\Windows\CurrentVersion\Component Based Servicing" -Name RebootPending)
 		{
-			$AutoUpdate = $true
+			$Pending = $true
+			$AutoUpdate = $false
+			if(Get-RegKey -ComputerName $Computer -Key "SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" -Name RebootRequired)
+			{
+				$AutoUpdate = $true
+			}
 		}
-	}
 
-	if ($AutoUpdate -eq $true)
-	{
-		Write-Host "($ComputerName) : There is a WindowsUpdate pending reboot" -ForegroundColor magenta
-	}
-	elseif ($Pending -eq $true)
-	{
-		Write-Host "($ComputerName) : There is a pending reboot" -ForegroundColor red
-	}
-	else
-	{
-		Write-Host "($ComputerName) : There is NO pending reboot" -ForegroundColor green
+		if ($AutoUpdate -eq $true)
+		{
+			Write-Host "($Computer) : There is a WindowsUpdate pending reboot" -ForegroundColor magenta
+		}
+		elseif ($Pending -eq $true)
+		{
+			Write-Host "($Computer) : There is a pending reboot" -ForegroundColor red
+		}
+		else
+		{
+			Write-Host "($Computer) : There is NO pending reboot" -ForegroundColor green
+		}
 	}
 }
 

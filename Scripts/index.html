@@ -15,7 +15,7 @@
 2SPOOKY4ME
 -->
 <meta charset="UTF-8">
-<title>Chorus LINKS</title>
+<title>dynamic LINKS</title>
 <style>
 body {
   background: #171117;
@@ -163,152 +163,22 @@ jQuery.expr[":"].icontains = jQuery.expr.createPseudo(function (arg) {
 //links in json object format
 links = {
   'Général': {
-    'Messagerie': 'https://cas.finances.gouv.fr/owa/',
-    'GED': 'https://ged.aife/fr',
-    'ClearQuest': 'https://chorusquest/cqweb',
-    'ClearCase': 'https://chorusquest/ccrc',
-    'Remedy': 'https://remedy.chorus.aife/arsys/shared/login.jsp',
+    'Messagerie': '',
+    'GED': '',
+    'ClearQuest': '',
+    'ClearCase': '',
+    'Remedy': '',
   },
   'Vmware vSphere WebClient': {
-    'Site primaire': 'https://n1smvir002.aop.chorus.aife:9443/vsphere-client',
-    'Site secondaire': 'https://n1smvir102.aop.chorus.aife:9443/vsphere-client'
+    'Site primaire': '',
+    'Site secondaire': ''
   },
   'Symantec Endpoint Protection Manager (SEPM) Web': {
-    'AOP': 'https://172.34.55.20:8443/console/apps/sepm',
-    'PRD': 'https://172.34.40.23:8443/console/apps/sepm',
-    'PPR': 'https://172.34.96.23:8443/console/apps/sepm',
-    'DEV': 'https://172.34.60.44:8443/console/apps/sepm',
-    'CPP': 'https://172.44.41.30:8443/console/apps/sepm'
-  },
-  'Symantec LUA': {
-    'n7smsec000': 'http://n7smsec000_adm:7070/lua/logon.do',
-    'n1smsec900': 'http://n1smsec900_adm:7070/lua/logon.do'
-  },
-  'Palo Alto': {
-    'NAT Primaire': 'https://172.34.57.22',
-    'NAT Secondaire': 'https://172.34.57.23',
-    'CPP Primaire': 'https://172.44.56.5',
-    'CPP Secondaire': 'https://172.44.56.6'
-  },
-  'Checkpoint MDS': {
-    'Checkpoint MDS' :'https://172.34.157.21'
-  },
-  'Centreon': {
-    'PRD' :'http://n1slope920.aop.chorus.aife/centreon/index.php',
-    'DEV' :'http://n3slope921.aop.chorus.aife/centreon/index.php'
-  },
-  'Networker Management console': {
-    'PRD et PPR' :'http://N1SLOPE991:9000',
-    'DEV' :'http://N3SLOPE991:9000'
-  },
-  'HMC (Hardware Management Console)': {
-    'Vauban1 Vauban2' :'https://n1slhmc001/hmc/connect',
-    'Toulouse1 Toulouse2' :'https://n1slhmc003/hmc/connect'
-  },
-  'IMM (Integrated Management Module)': {
-    'IMM (Integrated Management Module)' :'http://172.35.239.X'
-  },
-  'Redwood Cronacle Explorer': {
-    'PRD' :'http://n1slope928_adm.prd.chorus.aife:10180/scheduler/',
-    'PPR' :'http://n1slope928_adm.ppr.chorus.aife:10180/scheduler/',
-    'palier DEV1' :'http://n3slope101_adm:10180/scheduler/',
-    'palier DEV2' :'http://n3slope201_adm:10180/scheduler/',
-    'palier DEV3' :'http://n3slope301_adm:10180/scheduler/',
-    'palier DEV4' :'http://n3slope401_adm:10180/scheduler/',
-    'palier DEV5' :'http://n3slope501_adm:10180/scheduler/',
-    '2ème ligne DEV1' :'http://n3slope051_adm:10180/scheduler/',
-    '2ème ligne DEV2' :'http://n3slope051_adm:10180/scheduler/',
-    '2ème ligne DEV3' :'http://n3slope051_adm:10180/scheduler/'
-  },
-  'Cacti Web': {
-    'PRD et PPR' :'http://N1SLOPE940/cacti'
-  },
-  'MetaSIGN': {
-    'DEV1' :'https://n3slsec140-adm.dev.chorus.aife/',
-    'DEV2' :'https://n3selc340-adm.dev.chorus.aife/',
-    'DEV3' :'https://n3slsec440-adm.dev.chorus.aife/',
-    'Signature1' :'https://n1slsec040-adm.ppr.chorus.aife/',
-    'Signature2' :'https://n1selc041-adm.ppr.chorus.aife/',
-    'Signature3' :'https://n1slsec042-adm.ppr.chorus.aife/',
-    'Horodatage1' :'https://n1slsec030-adm.ppr.chorus.aife/',
-    'Horodatage2' :'https://n1slsec031-adm.ppr.chorus.aife/',
-    'Horodatage3' :'https://n1slsec032-adm.ppr.chorus.aife/',
-    'SVC' :'https://n1slsec060_adm.ppr.chorus.aife:8444/vericert-admin'
-  },
-  'MetaTIME': {
-    'DEV1' :'https://n3slsec130-adm.dev.chorus.aife/',
-    'DEV2' :'https://n3slsec330-adm.dev.chorus.aife/',
-    'DEV3' :'https://n3slsec430-adm.dev.chorus.aife/'},
-  'VeriCert': {
-    'DEV' :'https://n3slsec160-adm.dev.chorus.aife:8444/vericert-admin'
-  },
-  'HSM': {
-    'PRD1 PRD2' :'http://172.34.155.246/',
-    'PPR1 PPR2' :'http://172.34.155.244/',
-    'DEV' :'http://172.34.155.248/',
-    'PRA' :'http://172.34.155.247/',
-    'PERF' :'http://172.34.155.248/'
-  },
-  'Unisphere NAS': {
-    'PRD' :'https://172.34.193.13/start.html',
-    'HPRD' :'https://172.34.193.11/start.html'
-  },
-  'Unisphere for VMAX': {
-    'https://n1sastk001:5480/ (IE obligatoire)' :'https://n1sastk001:5480/',
-    'https://n1sastk002:8443/ (IE obligatoire)' :'https://n1sastk002:8443/'
-  },
-  'Data Domain Enterprise Manager (VTL)': {
-    'http://172.34.193.20/ddem' :'http://172.34.193.20/ddem'
-  },
-  'Citrix Edgesight': {
-    'PRD (IE obligatoire)' :'http://172.34.155.197/edgesight',
-    'PPR (IE obligatoire)' :'http://172.34.155.219/edgesight',
-    'DEV (IE obligatoire)' :'http://172.34.155.112/edgesight'
-  },
-  'SMA (Administrateur technique)': {
-    'PRD' :'http://n1slsecv100:8080/archive_link/connexion/connexion.do',
-    'PRD' :'http://172.33.115.208:8080/archive_link/connexion/connexion.do',
-    'PPR' :'http://n1slarcv100:8080/archive_link/connexion/connexion.do',
-    'PPR' :'http://172.33.131.208:8080/archive_link/connexion/connexion.do',
-    'DEV NBAS' :'http://n4slarc010:8080/archive_link/connexion/connexion.do',
-    'DEV NDEV' :'http://n3slarc110:8080/archive_link/connexion/connexion.do',
-    'DEV NMNT' :'http://n3slarc410:8080/archive_link/connexion/connexion.do',
-    'DEV NREC' :'http://n3slarc310:8080/archive_link/connexion/connexion.do',
-    'DEV NTST' :'http://n3slarc210:8080/archive_link/connexion/connexion.do',
-    '2ème ligne DEV MBAS' :'http://n4slarc060:8080/archive_link/connexion/connexion.do',
-    '2ème ligne DEV MDEV' :'http://n3slarc160:8080/archive_link/connexion/connexion.do',
-    '2ème ligne DEV MTST' :'http://n3slarc260:8080/archive_link/connexion/connexion.do'
-  },
-  'Axway': {
-    'Passport SE (administrateur)' :'http://n1slsea003:8080/synchrony-vantage/',
-    'Passport WS (administrateur)' :'http://n1slsea010:6090/ui/',
-    'Sentinel (administrateur)' :'http://n1slsea002:1309/SentinelAdministration.html',
-    'Sentinel (administrateur)' :'http://n1slsea002:1309/SentinelMonitoring.html',
-    'Sentinel (administrateur)' :'http://n1slsea002:1309/SentinelCorrelation.html'
-  },
-  'Mode secours (Authentification)': {
-    'PRD1' :'http://n1slsec010_adm:8080/secours/',
-    'PRD2' :'http://n1slsec011_adm:8080/secours/',
-    'PPR1' :'http://n1slsec010_adm:8080/secours/',
-    'PPR2' :'http://n1slsec011_adm:8080/secours/',
-    'REC' :'http://n3slsec110_adm:8080/secours/'
-  },
-  'Red Hat Satellite': {
-    'AOP' :'https://n1slope960/',
-    'DMZ' :'https://n7slope960/'
-  },
-  'Deny All': {
-    'https://172.34.155.208:8443/' :'https://172.34.155.208:8443/',
-    'https://n1safwl003_adm:8443/' :'https://n1safwl003_adm:8443/'
-  },
-  'Piwik': {
-    'CPP PRD' :'http://p1slope950.prd.portail.aife/piwik/',
-    'CPP PPR' :'http://p1slope950.ppr.portail.aife/piwik/',
-    'CPP REC' :'http://p3slcpp403.dev.portail.aife/piwik'
-  },
-  'vCOPS': {
-    'Vauban' :'https://n1saope900/vcops-vsphere/',
-    'Toulouse' :'https://172.34.250.32/vcops-vsphere'
+    'AOP': '',
+    'PRD': '',
+    'PPR': '',
+    'DEV': '',
+    'CPP': ''
   }
 };
 

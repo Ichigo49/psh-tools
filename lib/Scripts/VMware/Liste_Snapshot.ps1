@@ -5,10 +5,10 @@ if ( (Get-PSSnapin -Name VMware.VimAutomation.Core -ErrorAction SilentlyContinue
 Import-Module ..\modules\SYS_HTMLTable
 Write-Host "Done"
 
-$vcenter = @("VIRTADM3","VIRTADM6")
-$smtp = "mailhost"
-$From = "dsi-exploitation@universcience.fr"
-$To = ("mathieu.allegret@atos.net")
+$vcenter = @("","")
+$smtp = ""
+$From = ""
+$To = ("mathieu.allegret")
 $HTML = New-HTMLHead -title "VMWare Snapshots"
 
 foreach ($Server in $vcenter) {
