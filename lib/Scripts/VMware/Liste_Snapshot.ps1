@@ -1,11 +1,10 @@
 [CmdletBinding()]
-PARAM()
+PARAM($vcenter)
 Write-Host "Loading Vmware Snapin..." -NoNewLine
 if ( (Get-PSSnapin -Name VMware.VimAutomation.Core -ErrorAction SilentlyContinue) -eq $null ){Add-PsSnapin VMware.VimAutomation.Core}
 Import-Module ..\modules\SYS_HTMLTable
 Write-Host "Done"
 
-$vcenter = @("","")
 $smtp = ""
 $From = ""
 $To = ("mathieu.allegret")

@@ -1,4 +1,4 @@
-function Set-UserProxy { 
+﻿function Set-UserProxy { 
 	<# 
 		.Synopsis 
             Set Proxy 
@@ -40,34 +40,38 @@ function Set-UserProxy {
 
 	#>
 
-    [CmdletBinding()] 
+    [CmdletBinding(SupportsShouldProcess)] 
     Param 
     ( 
-        [Parameter(Mandatory=$false)] 
+        [Parameter()] 
         [ValidateNotNullOrEmpty()] 
         [Alias("server")] 
         [string]$ProxyServer, 
  
-        [Parameter(Mandatory=$false)] 
+        [Parameter()] 
         [Alias('port')] 
         [string]$ProxyPort = 80, 
         
-        [Parameter(Mandatory=$false)] 
+        [Parameter()] 
         [Alias('url')] 
         [string]$AutoConfig,
                   
-        [Parameter(Mandatory=$false)] 
+        [Parameter()] 
         [Alias('bypass')] 
         [string]$ByPassList,
         
-        [Parameter(Mandatory=$false)] 
-        [switch]$Local = $True
+        [Parameter()] 
+        [switch]$NotLocal
     ) 
  
     Begin { 
 
-        # Set VerbosePreference to Continue so that verbose messages are displayed. 
-        $VerbosePreference = 'Continue'
+		if (-not $PSBoundParameters.ContainsKey('Confirm')) {
+            $ConfirmPreference = $PSCmdlet.SessionState.PSVariable.GetValue('ConfirmPreference')
+        }
+        if (-not $PSBoundParameters.ContainsKey('WhatIf')) {
+            $WhatIfPreference = $PSCmdlet.SessionState.PSVariable.GetValue('WhatIfPreference')
+        }
 
         $regKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings"
 
@@ -75,25 +79,31 @@ function Set-UserProxy {
     
     Process { 
         
-        if ($ProxyServer) {
+        if ($ProxyServer -and -not $AutoConfig) {
             $proxyServerToDefine = "${ProxyServer}:${ProxyPort}"
-            Set-ItemProperty -path $regKey ProxyEnable -value 1
-            Set-ItemProperty -path $regKey ProxyServer -value $proxyServerToDefine
-            if ($ByPassList) {
-                if ($Local) {
-                    $ByPassList += ";<local>"
-                }
-                Set-ItemProperty -path $regKey ProxyOverride -value $ByPassList
-            }
+			if ($pscmdlet.shouldprocess("Are you sure?")) {
+			Write-Verbose "PROXY CONFIG : setting $proxyServerToDefine"
+				Set-ItemProperty -path $regKey ProxyEnable -value 1
+				Set-ItemProperty -path $regKey ProxyServer -value $proxyServerToDefine
+				if ($ByPassList) {
+					if (!$NotLocal) {
+						$ByPassList += ";<local>"
+					}
+					Set-ItemProperty -path $regKey ProxyOverride -value $ByPassList
+				}
+			}
             Write-Verbose "PROXY CONFIG : enabled"
         }
-        elseif ($AutoConfig) {
-            Set-ItemProperty -path $regKey AutoConfigURL -value $AutoConfig
-            Set-ItemProperty -path $regKey ProxyEnable -value 0
-            Write-Verbose "PROXY CONFIG : enabled"
+        elseif ($AutoConfig -and -not $ProxyServer) {
+			if ($pscmdlet.shouldprocess("Are you sure?")) {
+				Write-Verbose "PROXY CONFIG : setting AutoConfig $AutoConfig"
+				Set-ItemProperty -path $regKey AutoConfigURL -value $AutoConfig
+				Set-ItemProperty -path $regKey ProxyEnable -value 0
+				Write-Verbose "PROXY CONFIG : enabled"
+			}
         }
         else {
-            Write-Verbose "PROXY CONFIG : mauvais parametres"
+            Write-Verbose "PROXY CONFIG : bad parameters"
         }
         
     } 

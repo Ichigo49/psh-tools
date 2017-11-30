@@ -1,4 +1,4 @@
-﻿function Get-SNMPInfos {
+﻿function Get-SNMPInfo {
 	$RegSNMP = "HKLM:\SYSTEM\CurrentControlSet\services\SNMP"
 	$RegSNMPParam = Join-Path $RegSNMP "Parameters"
 	$RegSNMPTrap = Join-Path $RegSNMPParam "TrapConfiguration"

@@ -11,10 +11,10 @@
 # 1.0.1  27/12/2016 - added some comment
 ###########################################################################
 
-function Update-Sysinternals ($ToolsLocalDir = "c:\temp\sys")  
+function Update-Sysinternal ($ToolsLocalDir = "c:\temp\sys")  
 { 
 	if (Test-Path $ToolsLocalDir){ 
-   		cd $ToolsLocalDir
+   		Set-Location $ToolsLocalDir
    		$DebugPreference = "SilentlyContinue"
    		$wc = new-object System.Net.WebClient
    		$userAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2;)"
@@ -30,7 +30,7 @@ function Update-Sysinternals ($ToolsLocalDir = "c:\temp\sys")
 	    	$txt = ( ($match.Value  -replace "</A><br>", "`r`n") -replace  "<[^>]*?>","")
 	    	foreach($lines in $txt.Split("`r`n")){
 	        	$line=$lines|select-string  -NotMatch -Pattern "To Parent|^$|&lt;dir&gt;"
-	        	if ($line -ne $null){
+	        	if ($null -ne $line){
 		        	$date=(([string]$line).substring(0,38)).trimstart(" ") -replace "  "," "
 		         	$file=([string]$line).substring(52,(([string]$line).length-52))
                  	#Friday, May 30, 2008  4:55 PM          668 About_This_Site.txt
@@ -44,15 +44,15 @@ function Update-Sysinternals ($ToolsLocalDir = "c:\temp\sys")
         	$NeedUpdate=$false
 	    	if (Test-Path $_)
 	    	{
-	        	$SubtractSeconds = New-Object System.TimeSpan 0, 0, 0, ((dir $_).lastWriteTime).second, 0
-	    		$LocalFileDate= ( (dir $_).lastWriteTime ).Subtract( $SubtractSeconds )
+	        	$SubtractSeconds = New-Object System.TimeSpan 0, 0, 0, ((Get-ChildItem $_).lastWriteTime).second, 0
+	    		$LocalFileDate= ( (Get-ChildItem $_).lastWriteTime ).Subtract( $SubtractSeconds )
 	    		$needupdate=(($tools[$_]).touniversaltime() -lt $LocalFileDate.touniversaltime())
 	    	} else {$NeedUpdate=$true}
 	    	if ( $NeedUpdate ) 
 	    	{
 		    	Try {
 	            		$wc.DownloadFile("$ToolsUrl/$_","$ToolsLocalDir\$_" )
-	            		$f=dir "$ToolsLocalDir\$_"
+	            		$f=Get-ChildItem "$ToolsLocalDir\$_"
 	            		$f.lastWriteTime=($tools[$_])
 						"Updated $_"
 		       		}

@@ -1,4 +1,4 @@
-#requires -version 2
+﻿#requires -version 2
 function Expand-Storage {
 <#
     .SYNOPSIS
@@ -26,7 +26,7 @@ function Expand-Storage {
     .EXAMPLE
         Expand-Storage -DriveLetter S
 
-        Agrandissement de la partition S: à sa valeur maximum
+        Agrandissement de la partition S: Ã  sa valeur maximum
         
 #>
     [CmdletBinding()] 

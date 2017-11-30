@@ -11,7 +11,7 @@ function Get-UserProxy {
             Purpose/Change: Initial script development
 
 		.EXAMPLE 
-            Get-Proxy
+            Get-UserProxy
         
 	#>
 
@@ -30,25 +30,25 @@ function Get-UserProxy {
         $ProxyInfo = Get-ItemProperty $regkey
         
         if ($ProxyInfo.AutoConfigURL) {
-            $AutoConf = $ProxyInfo.AutoConfigURL
-            $obj = "" | Select AutoConfig
-            $obj.AutoConfig = $AutoConf
+			[PSCustomObject]@{
+                AutoConfig = $ProxyInfo.AutoConfigURL
+			}
         }
         elseif ($ProxyInfo.ProxyEnable -eq 1) {
-                $obj = "" | Select ProxyName,ProxyPort,ProxyEnable,ByPassList
-                $obj.ProxyName = ($ProxyInfo.ProxyServer).split(":")[0]
-                $obj.ProxyPort = ($ProxyInfo.ProxyServer).split(":")[1]
-                $obj.ProxyEnable = "Yes"
-                $obj.ByPassList = $ProxyInfo.ProxyOverride
+			[PSCustomObject]@{
+                ProxyName = ($ProxyInfo.ProxyServer).split(":")[0]
+                ProxyPort = ($ProxyInfo.ProxyServer).split(":")[1]
+                ProxyEnable = "Yes"
+                ByPassList = $ProxyInfo.ProxyOverride
+			}
         }
         else {
-                $obj = "" | Select ProxyEnable
-                $obj.ProxyEnable = "No"
+			[PSCustomObject]@{
+                ProxyEnable = "No"
+			}
         }
     } 
     
-    End {
-        return $obj
-    } 
+    End {} 
     
 }
