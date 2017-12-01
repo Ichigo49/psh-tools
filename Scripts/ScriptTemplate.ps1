@@ -1,4 +1,3 @@
-#requires -version 2
 <#
     .SYNOPSIS
         <Overview of script>
@@ -35,16 +34,13 @@ param (
 #>
 #---------------------------------------------------------[Initialisations]--------------------------------------------------------
 
-#Set Error Action to Silently Continue
-#$ErrorActionPreference = "SilentlyContinue"
-
 #Get Script Directory/Name
 $fullPathIncFileName = $MyInvocation.MyCommand.Definition
-$ScriptName = (Get-Item $fullPathIncFileName).BaseName
-$ScriptDir = (Get-Item $fullPathIncFileName).Directory
+$ScriptName = (Get-Item -Path $fullPathIncFileName).BaseName
+$ScriptDir = (Get-Item -Path $fullPathIncFileName).Directory
 
-#Dot Source required Function Libraries
-Import-Module $ScriptDir\..\lib\Modules\PSLogging
+#Dot Source required Variables/Function Libraries
+. $ScriptDir\GlobalVar.ps1
 
 
 #----------------------------------------------------------[Declarations]----------------------------------------------------------
@@ -53,8 +49,8 @@ Import-Module $ScriptDir\..\lib\Modules\PSLogging
 $sScriptVersion = "1.0"
 
 #Log File Info
-$DateDuLog = Get-Date -f "yyyyMMdd_HHmmss"
-$sLogPath = Join-Path $ScriptDir\.. "log"
+$DateDuLog = Get-Date -Format "yyyyMMdd_HHmmss"
+$sLogPath = Join-Path -Path $BASELOG -ChildPath "log"
 $sLogName = "${ScriptName}_$DateDuLog.log"
 $sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
 
@@ -67,6 +63,15 @@ $sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
 Start-Log -LogPath $sLogPath -LogName $sLogName -ScriptVersion $sScriptVersion
 
 #Script Execution goes here
-Write-LogInfo -LogPath $sLogFile -Message "" -TimeStamp -ToScreen
+try {
+	
+	Write-LogInfo -LogPath $sLogFile -Message "" -TimeStamp -ToScreen
+	
+} catch {
 
+	$errorMsg = $_.Exception.Message
+	#Write error to log file, end the log (idem to Stop-Log cmdlet) and exit script /!\ beware to this parameter (ExitGracfully)
+	Write-LogError -LogPath $sLogFile -Message "Failed to reboot server : $errorMsg" -TimeStamp -ToScreen -ExitGracefully
+	
+}
 Stop-Log -LogPath $sLogFile
