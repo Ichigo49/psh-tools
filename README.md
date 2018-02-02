@@ -9,7 +9,7 @@ under construction
 
 ## Motivation
 
-work lazyer(correct word?)/faster/better, same as my coworkers.
+work lazyer(correct word?)/faster/better, same for my coworkers.
 
 ## Installation
 
