@@ -1,1 +1,3 @@
-powershell -noprofile -executionpolicy Unrestricted -command SetupPshProfile.ps1
+cd %~dp0
+powershell -noprofile -executionpolicy Unrestricted -file SetupPshProfile.ps1
+pause
