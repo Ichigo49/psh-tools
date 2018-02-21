@@ -34,14 +34,16 @@ $sScriptVersion = "1.0"
 $DateDuLog = Get-Date -f "yyyyMMdd_HHmmss"
 $sLogName = "${ScriptName}_$DateDuLog.log"
 $sLogFile = Join-Path -Path $BASELOG -ChildPath $sLogName
+$ScriptSQL = Join-Path -Path $BASEFIC -ChildPath "WsusDBMaintenance.sql"
 
 Start-Log -LogPath $BASELOG -LogName $sLogName -ScriptVersion $sScriptVersion
 
 try {
 
 	Write-LogInfo -LogPath $sLogFile -Message "Starting WSUS DB Maintenance" -TimeStamp -ToScreen
-	$result = Invoke-WSUSDBMaintenance -UpdateServer serverwsus -Port 8530 -Verbose *>&1
-	Add-Content -Path $sLogFile -Value $result
+	#$result = Invoke-WSUSDBMaintenance -UpdateServer serverwsus -Port 8530 -Verbose *>&1
+	sqlcmd -S '\\.\pipe\MICROSOFT##WID\tsql\query' -i $ScriptSQL | Out-File -FilePath $sLogFile -Append -Encoding utf8
+	#Add-Content -Path $sLogFile -Value $result
 	Write-LogInfo -LogPath $sLogFile -Message "WSUS DB Maintenance finished" -TimeStamp -ToScreen
 } catch {
 	
