@@ -1,5 +1,5 @@
 <#
-	.SYSNOPSIS
+	.SYNOPSIS
 		Rotations fichier de log dans \Exploit\log
 		
 	.DESCRIPTION

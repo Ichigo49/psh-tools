@@ -1,5 +1,5 @@
-<#
-	.SYSNOPSIS
+﻿<#
+	.SYNOPSIS
 		Windows Update Report
 		
 	.DESCRIPTION
@@ -52,7 +52,8 @@ try {
 				$Report += Get-HTMLContentDataTable -ArrayOfObjects ($AvailableUpdates | Select-Object KB,Title,Size,@{Name="MoreInfoUrls";Expression={$_.MoreInfoUrls -join ";"}},RebootRequired) 
 			$Report += Get-HTMLContentClose
 		$Report += Get-HTMLClosePage
-		Save-HTMLReport -ReportPath $BASEFIC -ReportName $ReportFile -ReportContent $Report -ShowReport 
+		Save-HTMLReport -ReportPath $BASEFIC -ReportName $ReportFile -ReportContent $Report -ShowReport
+		Send-MailMessage -To 'mathieu.allegret@gfi.fr' -From 'noreply@gfi.fr' -SMTPServer  -BodyAsHtml -body ($Report | Out-String) -Subject "Windows Updates Status" -Attachments (Join-Path -Path $BASEFIC -ChildPath $ReportFile)
 	} else {
 		Write-LogInfo -LogPath $sLogFile -Message "No update available" -TimeStamp -ToScreen
 	}

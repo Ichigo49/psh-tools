@@ -1,5 +1,5 @@
 <#
-	.SYSNOPSIS
+	.SYNOPSIS
 		Positionnement de variables global pour les script d'exploit
 		
 	.DESCRIPTION

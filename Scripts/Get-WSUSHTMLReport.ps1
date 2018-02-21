@@ -54,8 +54,8 @@ try {
 				$Report += Get-HTMLContentDataTable -ArrayOfObjects ($AvailableUpdates | Select-Object @{Name="KB";Expression={$_.KnowledgebaseArticles -join ";"}},Title,@{Name='Classification';Expression={$_.UpdateClassificationTitle}},@{Name="MoreInfoUrls";Expression={$_.AdditionalInformationUrls -join ";"}}) 
 			$Report += Get-HTMLContentClose
 		$Report += Get-HTMLClosePage
-		Save-HTMLReport -ReportPath $BASEFIC -ReportName $ReportFile -ReportContent $Report -ShowReport
-		Send-MailMessage -To 'mathieu.allegret@gfi.fr' -From 'no-reply@aesn.fr' -SMTPServer msvexch02p.aesn.fr -BodyAsHtml -body ($Report | Out-String) -Subject "WSUS AESN - Updates Status" -Attachments (Join-Path -Path $BASEFIC -ChildPath $ReportFile)
+		Save-HTMLReport -ReportPath $BASEFIC -ReportName $ReportFile -ReportContent $Report
+		Send-MailMessage -To 'mathieu.allegret@gfi.fr' -From 'noreply@gfi.fr' -SMTPServer  -BodyAsHtml -body ($Report | Out-String) -Subject "WSUS - Updates Status" -Attachments (Join-Path -Path $BASEFIC -ChildPath $ReportFile)
 	} else {
 		Write-LogInfo -LogPath $sLogFile -Message "No update available" -TimeStamp -ToScreen
 		
