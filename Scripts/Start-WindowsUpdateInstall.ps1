@@ -1,5 +1,5 @@
 <#
-	.SYSNOPSIS
+	.SYNOPSIS
 		Install Windows Update
 		
 	.DESCRIPTION

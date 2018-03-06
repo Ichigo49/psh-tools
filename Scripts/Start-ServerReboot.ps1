@@ -1,5 +1,5 @@
 <#
-	.SYSNOPSIS
+	.SYNOPSIS
 		Reboot Server
 		
 	.DESCRIPTION

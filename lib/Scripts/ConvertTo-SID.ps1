@@ -11,7 +11,7 @@ function ConvertTo-SID {
     .EXAMPLE 
        ConvertTo-SID -SamAccountName ttorggler 
     .EXAMPLE 
-       ntsystemsttorggler  ConvertTo-SID 
+       ntsystemsttorggler | ConvertTo-SID 
     #>
     [CmdletBinding(ConfirmImpact='Medium')]
     Param

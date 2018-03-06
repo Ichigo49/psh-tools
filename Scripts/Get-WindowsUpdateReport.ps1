@@ -1,5 +1,5 @@
 <#
-	.SYSNOPSIS
+	.SYNOPSIS
 		Windows Update Report
 		
 	.DESCRIPTION

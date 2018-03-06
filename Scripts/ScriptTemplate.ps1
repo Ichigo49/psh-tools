@@ -44,12 +44,7 @@ $ScriptName = (Get-Item $fullPathIncFileName).BaseName
 $ScriptDir = (Get-Item $fullPathIncFileName).Directory
 
 #Load the GlobalVar.ps1 in \Exploit\util
-. $ScriptDir\..\..\util\GlobalVar.ps1
-
-#Dot Source required Function Libraries
-Import-Module $ScriptDir\..\lib\Modules\PSLogging
-
-
+. $ScriptDir\GlobalVar.ps1
 
 #----------------------------------------------------------[Declarations]----------------------------------------------------------
 
@@ -58,9 +53,8 @@ $sScriptVersion = "1.0"
 
 #Log File Info
 $DateDuLog = Get-Date -f "yyyyMMdd_HHmmss"
-$sLogPath = Join-Path $ScriptDir\.. "log"
 $sLogName = "${ScriptName}_$DateDuLog.log"
-$sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
+$sLogFile = Join-Path -Path $BASELOG -ChildPath $sLogName
 
 
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
@@ -68,7 +62,7 @@ $sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
 
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
-Start-Log -LogPath $sLogPath -LogName $sLogName -ScriptVersion $sScriptVersion
+Start-Log -LogPath $BASELOG -LogName $sLogName -ScriptVersion $sScriptVersion
 
 #Script Execution goes here
 Write-LogInfo -LogPath $sLogFile -Message "" -TimeStamp -ToScreen

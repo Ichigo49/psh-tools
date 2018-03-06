@@ -1,5 +1,5 @@
 <#
-	.SYSNOPSIS
+	.SYNOPSIS
 		Script custom, a modifier pour chaque besoin
 		
 	.DESCRIPTION
